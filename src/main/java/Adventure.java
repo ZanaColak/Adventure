@@ -13,6 +13,10 @@ public class Adventure {
         Room room8 = new Room("Romm 8", "Room with no distinct features, East & West");
         Room room9 = new Room("Romm 9", "Room with no distinct features, North & West");
 
-        room1.
+        startRoom = room1;
+        room1.setNorth();
+        room1.setEast();
+        room1.setWest();
+        room1.setSouth();
     }
 }
