@@ -1,7 +1,8 @@
 public class Adventure {
+    //Attribut
     private Room currentRoom;
 
-    public Adventure() {
+    public Adventure() { // Konstruktør
 
         Room room1 = new Room("Romm 1", "Room with no distinct features, East & South");
         Room room2 = new Room("Romm 2", "Room with no distinct features, East & West");
@@ -13,6 +14,7 @@ public class Adventure {
         Room room8 = new Room("Romm 8", "Room with no distinct features, East & West & North");
         Room room9 = new Room("Romm 9", "Room with no distinct features, North & West");
 
+        // Room bliver forbundet med en setmetode
         currentRoom = room1;
         room1.setEast(room2);
         room1.setSouth(room4);

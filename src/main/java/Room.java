@@ -6,11 +6,13 @@ public class Room {
     private Room west;
     private Room south;
 
+    //Konstruktør
     public Room(String name, String description) {
         this.name = name;
         this.description = description;
     }
 
+    //Set metode
     public void setName() {
         name = name;
     }
@@ -35,6 +37,7 @@ public class Room {
         this.south = south;
     }
 
+    //Get metode
     public Room getNorth() {
         return north;
     }
