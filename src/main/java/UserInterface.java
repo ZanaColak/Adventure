@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
 public class UserInterface {
-    private Adventure adventure = new Adventure();
+    private Adventure adventure = new Adventure(); //Metode kald
 
-    private boolean gameRunning = true;
-    private Scanner sc = new Scanner(System.in);
+    private boolean gameRunning = true; // erklære gamerunning til true
+    private Scanner sc = new Scanner(System.in); //Bruger input
 
-    public void startprogram() {
+    public void startprogram() { //Metode
         //UserInput
         System.out.println("""
                 Welcome To The Adventure Game
                 Where do you want to go?
                     """);
 
-        while (gameRunning) {
+        while (gameRunning) { //While loop der inderholder en switch case, fremfor en masse if's
             String userInput = sc.nextLine().toLowerCase();
             switch (userInput) {
                 case "go north", "north", "n":
