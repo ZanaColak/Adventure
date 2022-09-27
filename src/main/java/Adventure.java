@@ -46,21 +46,24 @@ public class Adventure {
         room9.setWest(room8);
 
 
-
-
-
-
     }
-    public boolean goNorth (){
-        if (currentRoom.getNorth() == null){
+
+    public boolean goNorth() {
+        if (currentRoom.getNorth() == null) {
             return false;
-        }
-        else {
+        } else {
             currentRoom = currentRoom.getNorth();
             return true;
-
         }
 
+    }
 
+    public boolean goEast() {
+        if (currentRoom.getEast() == null) {
+            return false;
+        } else {
+            currentRoom = currentRoom.getEast();
+            return true;
+        }
     }
 }
