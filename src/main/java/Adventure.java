@@ -26,23 +26,24 @@ public class Adventure {
         room3.setSouth(room6);
         room3.setWest(room2);
 
-        room4.setEast(room2);
-        room4.setSouth(room4);
+        room4.setNorth(room1);
+        room4.setSouth(room7);
 
-        room5.setEast(room2);
+        room5.setSouth(room8);
 
-        room6.setSouth(room4);
-        room6.setEast(room2);
+        room6.setNorth(room3);
+        room6.setSouth(room9);
 
-        room7.setSouth(room4);
-        room7.setEast(room2);
+        room7.setNorth(room4);
+        room7.setEast(room8);
 
 
-        room8.setSouth(room4);
-        room8.setEast(room2);
+        room8.setNorth(room5);
+        room8.setEast(room9);
+        room8.setWest(room7);
 
-        room9.setEast(room2);
-        room9.setSouth(room4);
+        room9.setNorth(room6);
+        room9.setWest(room8);
 
 
 
