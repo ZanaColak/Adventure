@@ -39,6 +39,7 @@ public class UserInterface {
                     break;
                 case "go west", "west":
                     boolean goWest;
+                    goWest = adventure.goWest();
                     if (goWest) {
                         System.out.println("You are going West");
                     }
@@ -48,6 +49,7 @@ public class UserInterface {
                     break;
                 case "go south", "south":
                     boolean goSouth;
+                    goSouth = adventure.goSouth();
                     if (goSouth) {
                         System.out.println("You are going South");
                     }
