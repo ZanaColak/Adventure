@@ -29,7 +29,7 @@ public class UserInterface {
                     boolean goEast;
                     goEast = adventure.goEast();
                     if (goEast) {
-                        System.out.println("Your are going east");
+                        System.out.println("You are going east");
                     } else {
                         System.out.println("You cannot go this way");
                     }
