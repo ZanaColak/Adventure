@@ -10,6 +10,12 @@ public class Room {
         this.name = name;
         this.description = description;
 
+    }
+    public void setName(){
+        name = name;
 
+    }
+    public void setDescription(){
+        description = description;
     }
 }
