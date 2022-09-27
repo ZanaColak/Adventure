@@ -13,7 +13,6 @@ public class UserInterface {
                 Where do you want to go?
                     """);
 
-
         while (gameRunning) {
             String userInput = sc.nextLine().toLowerCase();
             switch (userInput) {
@@ -22,8 +21,7 @@ public class UserInterface {
                     goNorth = adventure.goNorth();
                     if (goNorth) {
                         System.out.println("You are going North ");
-                    }
-                    else {
+                    } else {
                         System.out.println("You cannot go this way");
                     }
                     break;
@@ -32,8 +30,7 @@ public class UserInterface {
                     goEast = adventure.goEast();
                     if (goEast) {
                         System.out.println("Your are going east");
-                    }
-                    else {
+                    } else {
                         System.out.println("You cannot go this way");
                     }
                     break;
@@ -42,8 +39,7 @@ public class UserInterface {
                     goWest = adventure.goWest();
                     if (goWest) {
                         System.out.println("You are going West");
-                    }
-                    else {
+                    } else {
                         System.out.println("You cannot go this way");
                     }
                     break;
@@ -52,13 +48,14 @@ public class UserInterface {
                     goSouth = adventure.goSouth();
                     if (goSouth) {
                         System.out.println("You are going South");
-                    }
-                    else {
+                    } else {
                         System.out.println("You cannot go this way");
                     }
                     break;
                 case "exit":
                     gameRunning = false;
+                case "help":
+                    System.out.println("You can only choose between north, east, south & west");
             }
         }
     }
