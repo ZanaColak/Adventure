@@ -27,7 +27,7 @@ public class UserInterface {
                         System.out.println("You cannot go this way");
                     }
                     break;
-                case "go east", "east":
+                case "go east", "East":
                     boolean goEast;
                     goEast = adventure.goEast();
                     if (goEast) {
