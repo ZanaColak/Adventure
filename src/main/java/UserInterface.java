@@ -16,5 +16,7 @@ public class UserInterface {
         """);
         String name = sc.nextLine();
         int number = sc.nextInt();
+
+        switch ()
     }
 }
