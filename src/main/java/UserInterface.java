@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class UserInterface {
+
     private Scanner sc = new Scanner(System.in);
 
     public void startprogram() {
@@ -13,9 +14,15 @@ public class UserInterface {
                     9. Exit the game
                                 
                         """);
-            String name = sc.nextLine();
-            int number = sc.nextInt();
+            String userInput = sc.nextLine().toLowerCase();
+           // int number = sc.nextInt();
 
-            switch ()
+            switch (userInput){
+                case "go north", "north":
+                    System.out.println("you are going north ");
+                    break;
+                    case
+
+            }
         }
     }
