@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class UserInterface {
     private Scanner sc = new Scanner(System.in);
 
-    public void startprgram() {
+    public void startprogram() {
         //UserInput
             System.out.println("""
                     Welcome To The Adventure Game
