@@ -4,15 +4,15 @@ public class Adventure {
 
     public Adventure() { // Konstruktør
 
-        Room room1 = new Room("Romm 1", "Room with no distinct features, East & South");
-        Room room2 = new Room("Romm 2", "Room with no distinct features, East & West");
-        Room room3 = new Room("Romm 3", "Room with no distinct features, West & South");
-        Room room4 = new Room("Romm 4", "Room with no distinct features, North & South");
-        Room room5 = new Room("Romm 5", "Room with no distinct features, South");
-        Room room6 = new Room("Romm 6", "Room with no distinct features, North & South");
-        Room room7 = new Room("Romm 7", "Room with no distinct features, North & East");
-        Room room8 = new Room("Romm 8", "Room with no distinct features, East & West & North");
-        Room room9 = new Room("Romm 9", "Room with no distinct features, North & West");
+        Room room1 = new Room("Room 1 ", "Room with no distinct features, East & South");
+        Room room2 = new Room("Room 2 ", "Room with no distinct features, East & West");
+        Room room3 = new Room("Room 3 ", "Room with no distinct features, West & South");
+        Room room4 = new Room("Room 4 ", "Room with no distinct features, North & South");
+        Room room5 = new Room("Room 5 ", "Room with no distinct features, South");
+        Room room6 = new Room("Room 6 ", "Room with no distinct features, North & South");
+        Room room7 = new Room("Room 7 ", "Room with no distinct features, North & East");
+        Room room8 = new Room("Room 8 ", "Room with no distinct features, East & West & North");
+        Room room9 = new Room("Room 9 ", "Room with no distinct features, North & West");
 
         // Room bliver forbundet med en setmetode
         currentRoom = room1;
@@ -82,6 +82,19 @@ public class Adventure {
         } else {
             currentRoom = currentRoom.getSouth();
             return true;
+        }
+    }
+
+    public void lookRoom () {
+        System.out.println("You are in " + currentRoom.getName() + "\n" + currentRoom.getDescription());
+    }
+
+    public void handleRoomDirection (boolean goDirection, String direction) {
+        if (goDirection) {
+            System.out.println("You are going: " + direction + "\nYou are now in " + currentRoom.getName() + "\n" + currentRoom.getDescription());
+        }
+        else {
+            System.out.println("You cannot go this way");
         }
     }
 }

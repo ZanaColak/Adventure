@@ -12,13 +12,13 @@ public class Room {
         this.description = description;
     }
 
-    //Set metode
-    public void setName() {
-        name = name;
+    //Set metoder
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setDescription() {
-        description = description;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setNorth(Room north) {
@@ -37,7 +37,15 @@ public class Room {
         this.south = south;
     }
 
-    //Get metode
+    //Get metoder
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
     public Room getNorth() {
         return north;
     }
