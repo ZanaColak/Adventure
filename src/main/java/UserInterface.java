@@ -2,21 +2,19 @@ import java.util.Scanner;
 
 public class UserInterface {
 
+    private boolean gameRunning = true;
     private Scanner sc = new Scanner(System.in);
 
     public void startprogram() {
         //UserInput
-            System.out.println("""
-                    Welcome To The Adventure Game
-                    Where do you want to go?
-                    7. Look for the description of the room
-                    8. Help for instructions
-                    9. Exit the game
-                                
-                        """);
-            String userInput = sc.nextLine().toLowerCase();
+        System.out.println("""
+                Welcome To The Adventure Game
+                Where do you want to go?
+                    """);
+        String userInput = sc.nextLine().toLowerCase();
 
-            switch (userInput){
+while (gameRunning)
+            switch (userInput) {
                 case "go north", "north":
                     System.out.println("You are going north ");
                     break;
@@ -29,7 +27,8 @@ public class UserInterface {
                 case "go south", "south":
                     System.out.println("You are going south");
                     break;
-
+                case "exit":
+                    gameRunning = false;
             }
         }
     }
