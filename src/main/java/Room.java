@@ -5,4 +5,8 @@ public class Room {
     private Room east;
     private Room west;
     private Room south;
+
+    public Room (){
+
+    }
 }
