@@ -56,6 +56,7 @@ public class UserInterface {
                     gameRunning = false;
                 case "help":
                     System.out.println("You can only choose between north, east, south & west");
+                    break;
             }
         }
     }
