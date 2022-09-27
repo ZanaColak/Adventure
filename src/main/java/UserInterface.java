@@ -15,7 +15,6 @@ public class UserInterface {
                                 
                         """);
             String userInput = sc.nextLine().toLowerCase();
-           // int number = sc.nextInt();
 
             switch (userInput){
                 case "go north", "north":

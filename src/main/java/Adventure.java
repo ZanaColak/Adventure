@@ -45,6 +45,10 @@ public class Adventure {
         room9.setNorth(room6);
         room9.setWest(room8);
 
+        public boolean gonorth (){
+            if (currentRoom)
+            return
+        }
 
 
 
