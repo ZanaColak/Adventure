@@ -27,21 +27,33 @@ public class UserInterface {
                         System.out.println("You cannot go this way");
                     }
                     break;
-                case "go east", "East":
+                case "go east", "east":
                     boolean goEast;
                     goEast = adventure.goEast();
                     if (goEast) {
-                        System.out.println("Your are going East");
+                        System.out.println("Your are going east");
                     }
                     else {
                         System.out.println("You cannot go this way");
                     }
                     break;
                 case "go west", "west":
-                    System.out.println("You are going west");
+                    boolean goWest;
+                    if (goWest) {
+                        System.out.println("You are going West");
+                    }
+                    else {
+                        System.out.println("You cannot go this way");
+                    }
                     break;
                 case "go south", "south":
-                    System.out.println("You are going south");
+                    boolean goSouth;
+                    if (goSouth) {
+                        System.out.println("You are going South");
+                    }
+                    else {
+                        System.out.println("You cannot go this way");
+                    }
                     break;
                 case "exit":
                     gameRunning = false;
