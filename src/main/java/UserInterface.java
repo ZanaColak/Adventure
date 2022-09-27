@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class UserInterface {
+    private Adventure adventure = new Adventure();
 
     private boolean gameRunning = true;
     private Scanner sc = new Scanner(System.in);
@@ -11,15 +12,30 @@ public class UserInterface {
                 Welcome To The Adventure Game
                 Where do you want to go?
                     """);
-        String userInput = sc.nextLine().toLowerCase();
 
-while (gameRunning)
+
+        while (gameRunning) {
+            String userInput = sc.nextLine().toLowerCase();
             switch (userInput) {
                 case "go north", "north":
-                    System.out.println("You are going north ");
+                    boolean goNorth;
+                    goNorth = adventure.goNorth();
+                    if (goNorth) {
+                        System.out.println("You are going North ");
+                    }
+                    else {
+                        System.out.println("You cannot go this way");
+                    }
                     break;
                 case "go east", "east":
-                    System.out.println("You are going east");
+                    boolean goEast;
+                    goEast = adventure.goEast();
+                    if (goEast) {
+                        System.out.println("Your are going East");
+                    }
+                    else {
+                        System.out.println("You cannot go this way");
+                    }
                     break;
                 case "go west", "west":
                     System.out.println("You are going west");
@@ -32,3 +48,4 @@ while (gameRunning)
             }
         }
     }
+}
