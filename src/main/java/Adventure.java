@@ -18,6 +18,7 @@ public class Adventure {
         currentRoom = room1;
         room1.setEast(room2);
         room1.setSouth(room4);
+        //
 
         room2.setEast(room3);
         room2.setWest(room1);
