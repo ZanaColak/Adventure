@@ -14,5 +14,7 @@ public class UserInterface {
     9. Exit the game
                 
         """);
+        String name = sc.nextLine();
+        int number = sc.nextInt();
     }
 }
