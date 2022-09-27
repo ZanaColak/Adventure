@@ -1,5 +1,5 @@
 public class Adventure {
-    private Room startRoom;
+    private Room currentRoom;
 
     public Adventure() {
 
@@ -13,9 +13,19 @@ public class Adventure {
         Room room8 = new Room("Romm 8", "Room with no distinct features, East & West");
         Room room9 = new Room("Romm 9", "Room with no distinct features, North & West");
 
-        startRoom = room1;
+        currentRoom = room1;
         room1.setEast(room2);
         room1.setSouth(room4);
+        room2.setEast(room2);
+        room2.setSouth(room4);
+        room3.setEast(room2);
+        room3.setSouth(room4);
+        room4.setEast(room2);
+        room4.setSouth(room4);
+        room5.setEast(room2);
+        room6.setSouth(room4);
+        room6.setEast(room2);
+        room7.setSouth(room4);
 
     }
 }
