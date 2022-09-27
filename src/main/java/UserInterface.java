@@ -16,7 +16,7 @@ public class UserInterface {
         while (gameRunning) {
             String userInput = sc.nextLine().toLowerCase();
             switch (userInput) {
-                case "go north", "north":
+                case "go north", "north", "n":
                     boolean goNorth;
                     goNorth = adventure.goNorth();
                     if (goNorth) {
@@ -25,7 +25,7 @@ public class UserInterface {
                         System.out.println("You cannot go this way");
                     }
                     break;
-                case "go east", "east":
+                case "go east", "east", "e":
                     boolean goEast;
                     goEast = adventure.goEast();
                     if (goEast) {
@@ -34,7 +34,7 @@ public class UserInterface {
                         System.out.println("You cannot go this way");
                     }
                     break;
-                case "go west", "west":
+                case "go west", "west", "w":
                     boolean goWest;
                     goWest = adventure.goWest();
                     if (goWest) {
@@ -43,7 +43,7 @@ public class UserInterface {
                         System.out.println("You cannot go this way");
                     }
                     break;
-                case "go south", "south":
+                case "go south", "south", "s":
                     boolean goSouth;
                     goSouth = adventure.goSouth();
                     if (goSouth) {
