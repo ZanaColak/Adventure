@@ -13,7 +13,6 @@ public class Room {
 
     public void setName(){
         name = name;
-
     }
     public void setDescription(){
         description = description;
