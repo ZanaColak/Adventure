@@ -19,9 +19,17 @@ public class UserInterface {
 
             switch (userInput){
                 case "go north", "north":
-                    System.out.println("you are going north ");
+                    System.out.println("You are going north ");
                     break;
-                    case
+                case "go east", "east":
+                    System.out.println("You are going east");
+                    break;
+                case "go west", "west":
+                    System.out.println("You are going west");
+                    break;
+                case "go south", "south":
+                    System.out.println("You are going south");
+                    break;
 
             }
         }
