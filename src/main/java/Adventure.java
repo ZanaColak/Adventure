@@ -1,7 +1,7 @@
 public class Adventure {
     //Attribut
     // private Room currentRoom;
-    //Map map = new Map();
+    Map map = new Map();
 
     /*public Adventure() { // Konstruktør
 
@@ -49,49 +49,49 @@ public class Adventure {
 
         //Metode til at flytte
         public boolean goNorth () {
-            if (Map.currentRoom.getNorth() == null) {
+            if (map.currentRoom.getNorth() == null) {
                 return false;
             } else {
-                Map.currentRoom = Map.currentRoom.getNorth();
+                map.currentRoom = map.currentRoom.getNorth();
                 return true;
             }
 
         }
 
         public boolean goEast () {
-            if (Map.currentRoom.getEast() == null) {
+            if (map.currentRoom.getEast() == null) {
                 return false;
             } else {
-                Map.currentRoom = Map.currentRoom.getEast();
+                map.currentRoom = map.currentRoom.getEast();
                 return true;
             }
         }
 
         public boolean goWest () {
-            if (Map.currentRoom.getWest() == null) {
+            if (map.currentRoom.getWest() == null) {
                 return false;
             } else {
-                Map.currentRoom = Map.currentRoom.getWest();
+                map.currentRoom = map.currentRoom.getWest();
                 return true;
             }
         }
 
         public boolean goSouth () {
-            if (Map.currentRoom.getSouth() == null) {
+            if (map.currentRoom.getSouth() == null) {
                 return false;
             } else {
-                Map.currentRoom = Map.currentRoom.getSouth();
+                map.currentRoom = map.currentRoom.getSouth();
                 return true;
             }
         }
 
         public void lookRoom () {
-            System.out.println("You are in " + Map.currentRoom.getName() + "\n" + Map.currentRoom.getDescription());
+            System.out.println("You are in " + map.currentRoom.getName() + "\n" + map.currentRoom.getDescription());
         }
 
         public void handleRoomDirection (boolean goDirection, String direction){
             if (goDirection) {
-                System.out.println("You are going: " + direction + "\nYou are now in " + Map.currentRoom.getName() + "\n" + Map.currentRoom.getDescription());
+                System.out.println("You are going: " + direction + "\nYou are now in " + map.currentRoom.getName() + "\n" + map.currentRoom.getDescription());
             } else {
                 System.out.println("You cannot go this way");
             }
