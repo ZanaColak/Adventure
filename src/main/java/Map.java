@@ -1,5 +1,5 @@
 public class Map {
-    public static Room currentRoom; //Attribut
+    public Room currentRoom; //Attribut
 
     /*public Room getCurrentRoom (){
 
