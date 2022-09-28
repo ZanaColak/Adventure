@@ -1,11 +1,11 @@
 public class Adventure {
     //Attribut
-   // private Room currentRoom;
-Map map = new Map();
+    // private Room currentRoom;
+    //Map map = new Map();
 
-   public Adventure() { // Konstruktør
+    /*public Adventure() { // Konstruktør
 
-     /*   Room room1 = new Room("Room 1 ", "Room with no distinct features, East & South");
+        Room room1 = new Room("Room 1 ", "Room with no distinct features, East & South");
         Room room2 = new Room("Room 2 ", "Room with no distinct features, East & West");
         Room room3 = new Room("Room 3 ", "Room with no distinct features, West & South");
         Room room4 = new Room("Room 4 ", "Room with no distinct features, North & South");
@@ -16,7 +16,7 @@ Map map = new Map();
         Room room9 = new Room("Room 9 ", "Room with no distinct features, North & West");
 
         // Room bliver forbundet med en setmetode
-        currentRoom = room1;
+        Map.currentRoom = room1;
         room1.setEast(room2);
         room1.setSouth(room4);
 
@@ -44,57 +44,57 @@ Map map = new Map();
         room8.setWest(room7);
 
         room9.setNorth(room6);
-        room9.setWest(room8);
+        room9.setWest(room8);*/
 
 
-    //Metode til at flytte
-    public boolean goNorth() {
-        if (currentRoom.getNorth() == null) {
-            return false;
-        } else {
-            currentRoom = currentRoom.getNorth();
-            return true;
+        //Metode til at flytte
+        public boolean goNorth () {
+            if (Map.currentRoom.getNorth() == null) {
+                return false;
+            } else {
+                Map.currentRoom = Map.currentRoom.getNorth();
+                return true;
+            }
+
         }
 
-    }
-
-    public boolean goEast() {
-        if (currentRoom.getEast() == null) {
-            return false;
-        } else {
-            currentRoom = currentRoom.getEast();
-            return true;
+        public boolean goEast () {
+            if (Map.currentRoom.getEast() == null) {
+                return false;
+            } else {
+                Map.currentRoom = Map.currentRoom.getEast();
+                return true;
+            }
         }
-    }
 
-    public boolean goWest() {
-        if (currentRoom.getWest() == null) {
-            return false;
-        } else {
-            currentRoom = currentRoom.getWest();
-            return true;
+        public boolean goWest () {
+            if (Map.currentRoom.getWest() == null) {
+                return false;
+            } else {
+                Map.currentRoom = Map.currentRoom.getWest();
+                return true;
+            }
         }
-    }
 
-    public boolean goSouth() {
-        if (currentRoom.getSouth() == null) {
-            return false;
-        } else {
-            currentRoom = currentRoom.getSouth();
-            return true;
+        public boolean goSouth () {
+            if (Map.currentRoom.getSouth() == null) {
+                return false;
+            } else {
+                Map.currentRoom = Map.currentRoom.getSouth();
+                return true;
+            }
         }
-    }
 
-    public void lookRoom () {
-        System.out.println("You are in " + currentRoom.getName() + "\n" + currentRoom.getDescription());
-    }
+        public void lookRoom () {
+            System.out.println("You are in " + Map.currentRoom.getName() + "\n" + Map.currentRoom.getDescription());
+        }
 
-    public void handleRoomDirection (boolean goDirection, String direction) {
-        if (goDirection) {
-            System.out.println("You are going: " + direction + "\nYou are now in " + currentRoom.getName() + "\n" + currentRoom.getDescription());
+        public void handleRoomDirection (boolean goDirection, String direction){
+            if (goDirection) {
+                System.out.println("You are going: " + direction + "\nYou are now in " + Map.currentRoom.getName() + "\n" + Map.currentRoom.getDescription());
+            } else {
+                System.out.println("You cannot go this way");
+            }
         }
-        else {
-            System.out.println("You cannot go this way");
-        }
-    }
+    //}
 }

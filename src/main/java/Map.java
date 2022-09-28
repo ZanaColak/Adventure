@@ -1,13 +1,15 @@
 public class Map {
-    private Room currentRoom; //Attribut
+    public static Room currentRoom; //Attribut
 
-    public Room getCurrentRoom (){
+    /*public Room getCurrentRoom (){
+
         return currentRoom;
     }
 
     public void setCurrentRoom (Room room){
+
         this.currentRoom = currentRoom;
-    }
+    }*/
 
     public Map() { //Konstruktør
         Room room1 = new Room("Room 1 ", "Room with no distinct features, East & South");
