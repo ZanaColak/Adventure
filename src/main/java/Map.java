@@ -13,7 +13,7 @@ public class Map {
         Room room9 = new Room("Room 9 ", "Room with no distinct features, North & West");
 
         // Room bliver forbundet med en setmetode
-        player.currentRoom = room1;
+        room1 = player.getCurrentRoom();
         room1.setEast(room2);
         room1.setSouth(room4);
 

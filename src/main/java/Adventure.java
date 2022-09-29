@@ -5,10 +5,10 @@ public class Adventure {
 
     //Metode til at flytte
     public boolean goNorth() {
-        if (map.player.currentRoom.getNorth() == null) {
+        if (map.player.getCurrentRoom().getNorth() == null) {
             return false;
         } else {
-            map.player.currentRoom = map.player.currentRoom.getNorth();
+            map.player.getCurrentRoom() = map.player.getCurrentRoom().getNorth();
             return true;
         }
 

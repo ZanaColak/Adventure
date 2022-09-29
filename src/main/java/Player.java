@@ -1,3 +1,7 @@
 public class Player {
-    public Room currentRoom; //Attribut
+    private Room currentRoom; //Attribut
+
+    public Room getCurrentRoom() {
+        return currentRoom;
+    }
 }
