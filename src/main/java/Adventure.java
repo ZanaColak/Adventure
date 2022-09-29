@@ -39,16 +39,4 @@ public class Adventure {
             return true;
         }
     }
-
-    public void lookRoom() {
-        System.out.println("You are in " + player.getCurrentRoom().getName() + "\n" + player.getCurrentRoom().getDescription());
-    }
-
-    public void handleRoomDirection(boolean goDirection, String direction) {
-        if (goDirection) {
-            System.out.println("You are going: " + direction + "\nYou are now in " + player.getCurrentRoom().getName() + "\n" + player.getCurrentRoom().getDescription());
-        } else {
-            System.out.println("You cannot go this way");
-        }
-    }
 }

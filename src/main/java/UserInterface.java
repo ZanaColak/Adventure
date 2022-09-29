@@ -19,25 +19,25 @@ public class UserInterface {
                 case "go north", "north", "n":
                     boolean goNorth;
                     goNorth = adventure.goNorth();
-                    adventure.handleRoomDirection(goNorth, "North");
+                    handleRoomDirection(goNorth, "North");
                     break;
                 case "go east", "east", "e":
                     boolean goEast;
                     goEast = adventure.goEast();
-                    adventure.handleRoomDirection(goEast, "East");
+                    handleRoomDirection(goEast, "East");
                     break;
                 case "go west", "west", "w":
                     boolean goWest;
                     goWest = adventure.goWest();
-                    adventure.handleRoomDirection(goWest, "West");
+                    handleRoomDirection(goWest, "West");
                     break;
                 case "go south", "south", "s":
                     boolean goSouth;
                     goSouth = adventure.goSouth();
-                    adventure.handleRoomDirection(goSouth, "South");
+                    handleRoomDirection(goSouth, "South");
                     break;
                 case "look":
-                    adventure.lookRoom();
+                    lookRoom();
                     break;
                 case "help":
                     System.out.println("""
@@ -50,6 +50,17 @@ public class UserInterface {
                     System.out.println("Exiting program..");
                     gameRunning = false;
             }
+        }
+    }
+    public void lookRoom() {
+        System.out.println("You are in " + adventure.player.getCurrentRoom().getName() + "\n" + adventure.player.getCurrentRoom().getDescription());
+    }
+
+    public void handleRoomDirection(boolean goDirection, String direction) {
+        if (goDirection) {
+            System.out.println("You are going: " + direction + "\nYou are now in " + adventure.player.getCurrentRoom().getName() + "\n" + adventure.player.getCurrentRoom().getDescription());
+        } else {
+            System.out.println("You cannot go this way");
         }
     }
 }
