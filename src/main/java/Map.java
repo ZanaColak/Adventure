@@ -1,16 +1,6 @@
 public class Map {
-    public Room currentRoom; //Attribut
 
-    /*public Room getCurrentRoom (){
-
-        return currentRoom;
-    }
-
-    public void setCurrentRoom (Room room){
-
-        this.currentRoom = currentRoom;
-    }*/
-
+    Player player = new Player();
     public Map() { //Konstruktør
         Room room1 = new Room("Room 1 ", "Room with no distinct features, East & South");
         Room room2 = new Room("Room 2 ", "Room with no distinct features, East & West");
@@ -23,7 +13,7 @@ public class Map {
         Room room9 = new Room("Room 9 ", "Room with no distinct features, North & West");
 
         // Room bliver forbundet med en setmetode
-        currentRoom = room1;
+        player.currentRoom = room1;
         room1.setEast(room2);
         room1.setSouth(room4);
 
