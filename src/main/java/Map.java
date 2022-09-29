@@ -53,7 +53,7 @@ public class Map {
         room9.setWest(room8);
     }
 
-    public Room getStarterRoom () {
+    public Room getStarterRoom() {
         return room1;
     }
 

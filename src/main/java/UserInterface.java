@@ -41,10 +41,10 @@ public class UserInterface {
                     break;
                 case "help":
                     System.out.println("""
-                    You can choose to go north, east, south or west.
-                    You can type look to see the current room's description.
-                    You can close the game by typing exit.
-                    """);
+                            You can choose to go north, east, south or west.
+                            You can type look to see the current room's description.
+                            You can close the game by typing exit.
+                            """);
                     break;
                 case "exit":
                     System.out.println("Exiting program..");

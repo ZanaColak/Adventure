@@ -1,7 +1,6 @@
 public class Adventure {
     //Attribut
     Player player = new Player();
-    //Map map = new Map();
 
     //Metode til at flytte forskellige retninger
     public boolean goNorth() {
@@ -11,6 +10,7 @@ public class Adventure {
             player.setCurrentRoom(player.getCurrentRoom().getNorth());
             return true;
         }
+
     }
 
     public boolean goEast() {
