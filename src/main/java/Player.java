@@ -18,7 +18,11 @@ public class Player {
 
     }
     public void takeItem (String name, String description){
-        Room room = new Room(name,description);
-        room.getName();
+
+        //TODO
+        Item findItem = currentRoom.findItem(name);
+        inventory.add(findItem);
+        currentRoom.getItems().remove(findItem);
+
     }
 }
