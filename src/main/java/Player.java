@@ -1,7 +1,11 @@
 public class Player {
-    private Room currentRoom; //Attribut
+
+    Map map = new Map();
+    private Room currentRoom = map.getStarterRoom(); //Attribut
+
 
     public Room getCurrentRoom() {
+
         return currentRoom;
     }
 }

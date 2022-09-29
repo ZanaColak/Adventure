@@ -1,53 +1,53 @@
 public class Adventure {
     //Attribut
     Player player = new Player();
-    Map map = new Map();
+    //Map map = new Map();
 
     //Metode til at flytte
     public boolean goNorth() {
-        if (map.player.getCurrentRoom().getNorth() == null) {
+        if (player.getCurrentRoom().getNorth() == null) {
             return false;
         } else {
-            map.player.getCurrentRoom() = map.player.getCurrentRoom().getNorth();
+            /*player.getCurrentRoom() =*/ player.getCurrentRoom().getNorth();
             return true;
         }
 
     }
 
     public boolean goEast() {
-        if (map.player.currentRoom.getEast() == null) {
+        if (player.getCurrentRoom().getEast() == null) {
             return false;
         } else {
-            map.player.currentRoom = map.player.currentRoom.getEast();
+            /*player.getCurrentRoom() =*/ player.getCurrentRoom().getEast();
             return true;
         }
     }
 
     public boolean goWest() {
-        if (map.player.currentRoom.getWest() == null) {
+        if (player.getCurrentRoom().getWest() == null) {
             return false;
         } else {
-            map.player.currentRoom = map.player.currentRoom.getWest();
+            /*player.getCurrentRoom() =*/ player.getCurrentRoom().getWest();
             return true;
         }
     }
 
     public boolean goSouth() {
-        if (map.player.currentRoom.getSouth() == null) {
+        if (player.getCurrentRoom().getSouth() == null) {
             return false;
         } else {
-            map.player.currentRoom = map.player.currentRoom.getSouth();
+            /*player.getCurrentRoom() =*/ player.getCurrentRoom().getSouth();
             return true;
         }
     }
 
     public void lookRoom() {
-        System.out.println("You are in " + map.player.currentRoom.getName() + "\n" + map.player.currentRoom.getDescription());
+        System.out.println("You are in " + player.getCurrentRoom().getName() + "\n" + player.getCurrentRoom().getDescription());
     }
 
     public void handleRoomDirection(boolean goDirection, String direction) {
         if (goDirection) {
-            System.out.println("You are going: " + direction + "\nYou are now in " + map.player.currentRoom.getName() + "\n" + map.player.currentRoom.getDescription());
+            System.out.println("You are going: " + direction + "\nYou are now in " + player.getCurrentRoom().getName() + "\n" + player.getCurrentRoom().getDescription());
         } else {
             System.out.println("You cannot go this way");
         }

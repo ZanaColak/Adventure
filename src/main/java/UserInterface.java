@@ -20,41 +20,21 @@ public class UserInterface {
                     boolean goNorth;
                     goNorth = adventure.goNorth();
                     adventure.handleRoomDirection(goNorth, "North");
-                    /*if (goNorth) {
-                        System.out.println("You are going North ");
-                    } else {
-                        System.out.println("You cannot go this way");
-                    }*/
                     break;
                 case "go east", "east", "e":
                     boolean goEast;
                     goEast = adventure.goEast();
                     adventure.handleRoomDirection(goEast, "East");
-                    /*if (goEast) {
-                        System.out.println("You are going east");
-                    } else {
-                        System.out.println("You cannot go this way");
-                    }*/
                     break;
                 case "go west", "west", "w":
                     boolean goWest;
                     goWest = adventure.goWest();
                     adventure.handleRoomDirection(goWest, "West");
-                    /*if (goWest) {
-                        System.out.println("You are going West");
-                    } else {
-                        System.out.println("You cannot go this way");
-                    }*/
                     break;
                 case "go south", "south", "s":
                     boolean goSouth;
                     goSouth = adventure.goSouth();
                     adventure.handleRoomDirection(goSouth, "South");
-                    /*if (goSouth) {
-                        System.out.println("You are going South");
-                    } else {
-                        System.out.println("You cannot go this way");
-                    }*/
                     break;
                 case "look":
                     adventure.lookRoom();
