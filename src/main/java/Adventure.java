@@ -3,7 +3,7 @@ public class Adventure {
     Player player = new Player();
     //Map map = new Map();
 
-    //Metode til at flytte
+    //Metode til at flytte forskellige retninger
     public boolean goNorth() {
         if (player.getCurrentRoom().getNorth() == null) {
             return false;
