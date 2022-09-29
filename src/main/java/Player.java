@@ -8,7 +8,6 @@ public class Player {
     private ArrayList<Item> inventory = new ArrayList<Item>();
 
     public Room getCurrentRoom() {
-
         return currentRoom;
     }
 
@@ -18,7 +17,8 @@ public class Player {
     public void dropItem (){
 
     }
-    public void takeItem (){
-
+    public void takeItem (String name, String description){
+        Room room = new Room(name,description);
+        room.getName();
     }
 }
