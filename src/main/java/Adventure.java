@@ -8,17 +8,16 @@ public class Adventure {
         if (player.getCurrentRoom().getNorth() == null) {
             return false;
         } else {
-            /*player.getCurrentRoom() =*/ player.getCurrentRoom().getNorth();
+            player.setCurrentRoom(player.getCurrentRoom().getNorth());
             return true;
         }
-
     }
 
     public boolean goEast() {
         if (player.getCurrentRoom().getEast() == null) {
             return false;
         } else {
-            /*player.getCurrentRoom() =*/ player.getCurrentRoom().getEast();
+            player.setCurrentRoom(player.getCurrentRoom().getEast());
             return true;
         }
     }
@@ -27,7 +26,7 @@ public class Adventure {
         if (player.getCurrentRoom().getWest() == null) {
             return false;
         } else {
-            /*player.getCurrentRoom() =*/ player.getCurrentRoom().getWest();
+            player.setCurrentRoom(player.getCurrentRoom().getWest());
             return true;
         }
     }
@@ -36,7 +35,7 @@ public class Adventure {
         if (player.getCurrentRoom().getSouth() == null) {
             return false;
         } else {
-            /*player.getCurrentRoom() =*/ player.getCurrentRoom().getSouth();
+            player.setCurrentRoom(player.getCurrentRoom().getSouth());
             return true;
         }
     }
