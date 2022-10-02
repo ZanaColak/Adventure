@@ -3,9 +3,9 @@ import java.util.*;
 public class Player {
 
     Map map = new Map();
-    private Room currentRoom = map.getStarterRoom(); //Attribut
+    private Room currentRoom = map.getStarterRoom(); //Initialiserer currentRoom som starterRoom.
 
-    private ArrayList<Item> inventory = new ArrayList<Item>();
+    private ArrayList<Item> inventory = new ArrayList<>();
 
     public Room getCurrentRoom() {
         return currentRoom;
@@ -16,16 +16,16 @@ public class Player {
         this.currentRoom = currentRoom;
     }
 
-    public ArrayList<Item> inventoryList () {
+    public ArrayList<Item> getInventoryList () {
         return inventory;
     }
 
     public void dropItem (String itemName){
-        for (int i = 0; i < inventory.size(); i++){
-            Item item = inventory.get(i);
+        for (int i = 0; i < getInventoryList().size(); i++){
+            Item item = getInventoryList().get(i);
             if (item.getItemName().equals(itemName)) {
                 inventory.remove(item);
-                currentRoom.getItem(itemName);
+                currentRoom.getItemList().add(item);
                 System.out.println("Item removed from inventory");
             }
             else {
@@ -35,11 +35,11 @@ public class Player {
     }
 
     public void takeItem (String itemName){
-        for (int i = 0; i < currentRoom.itemList().size(); i++){
-            Item item = currentRoom.itemList().get(i);
+        for (int i = 0; i < currentRoom.getItemList().size(); i++){
+            Item item = currentRoom.getItemList().get(i);
             if (item.getItemName().equals(itemName)) {
                 inventory.add(item);
-                currentRoom.itemList().remove(itemName);
+                currentRoom.removeItem(item);
                 System.out.println("Item added to inventory");
             }
             else {

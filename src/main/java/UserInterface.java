@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -50,16 +49,16 @@ public class UserInterface {
                             """);
                     break;
                 case "inventory", "inv", "invent":
-                    System.out.println(player.inventoryList());
+                    showPlayerItems();
                     break;
                 case "take":
                     System.out.println("Please enter the name of the item you want to take");
-                    String itemTake = sc.nextLine();
+                    String itemTake = sc.nextLine().toLowerCase();
                     player.takeItem(itemTake);
                     break;
                 case "drop":
                     System.out.println("Please enter the name of the item you want to drop");
-                    String itemDrop = sc.nextLine();
+                    String itemDrop = sc.nextLine().toLowerCase();
                     player.dropItem(itemDrop);
                     break;
                 case "exit":
@@ -68,22 +67,53 @@ public class UserInterface {
             }
         }
     }
+
     public void lookRoom() {
-        System.out.println("You are in " + adventure.player.getCurrentRoom().getName() + "\n" + adventure.player.getCurrentRoom().getDescription() + "\n" + "In the room you see: " + showRoomItems(player.getCurrentRoom()) /*player.getCurrentRoom().itemList()*/);
+        System.out.println("You are in " + adventure.player.getCurrentRoom().getName() + "\n" + adventure.player.getCurrentRoom().getDescription() + "\n" + "In the room you see: " + showRoomItems(player.getCurrentRoom()));
     }
 
     public void handleRoomDirection(boolean goDirection, String direction) {
         if (goDirection) {
-            System.out.println("You are going: " + direction + "\nYou are now in " + adventure.player.getCurrentRoom().getName() + "\n" + adventure.player.getCurrentRoom().getDescription());
+            System.out.println("You are going: " + direction + "\nYou are now in " + adventure.player.getCurrentRoom().getName() + "\n" + adventure.player.getCurrentRoom().getDescription() + "\n" + "In the room you see: " + showRoomItems(player.getCurrentRoom()));
         } else {
             System.out.println("You cannot go this way");
         }
     }
 
-    public String showRoomItems (Room room) {
-        for (Item item : room.itemList()) {
+    //Virker ikke
+/*    public String[] showRoomItems(Room room) {
+        if (room.getItemList().isEmpty()) {
+            System.out.println("Room is empty!");
+        }
+        for (int i = 0; i < room.getItemList().size(); i++){
+            String[] elements = new String[i];
+            Item item = room.getItemList().get(i);
+            elements[i] = item.getItemName();
+            if (i >= room.getItemList().size()) {
+                return elements;
+            }
+        }
+        return null;
+    }*/
+
+    //Viser kun "bag" i rooms
+    public String showRoomItems(Room room) {
+        if (room.getItemList().isEmpty()) {
+            System.out.println("Room is empty!");
+        }
+        for (Item item : room.getItemList()){
             return item.getItemName();
         }
         return null;
     }
+
+    public void showPlayerItems () {
+        if (player.getInventoryList().isEmpty()) {
+            System.out.println("Inventory is empty");
+        }
+        for (Item item : player.getInventoryList()) {
+            System.out.println(item.getItemName());
+        }
+    }
+
 }

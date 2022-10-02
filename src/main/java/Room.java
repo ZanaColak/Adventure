@@ -9,7 +9,7 @@ public class Room {
     private Room south;
     private String item;
 
-    private ArrayList<Item> items = new ArrayList<Item>();
+    private ArrayList<Item> items = new ArrayList<>();
 
     //Konstruktør
     public Room(String name, String description) {
@@ -66,14 +66,17 @@ public class Room {
     public Room getSouth() {
         return south;
     }
-    public void addItems (Item item){
+    public void addItem (Item item){
         items.add(item);
     }
 
-    public ArrayList<Item> itemList () {
+    public ArrayList<Item> getItemList () {
         return items;
     }
 
+    public void removeItem (Item item) {
+                items.remove(item);
+    }
 
     public String getItem (String itemName){
         for (Item item : items) {
