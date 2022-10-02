@@ -1,5 +1,5 @@
 public class Adventure {
-    //Attribut
+    //Player instans
     Player player = new Player();
 
     //Metode til at flytte forskellige retninger

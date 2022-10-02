@@ -18,7 +18,7 @@ public class Map {
         //room1 = player.getCurrentRoom();
         room1.setEast(room2);
         room1.setSouth(room4);
-
+        room1.itemList().add(item1);
 
         room2.setEast(room3);
         room2.setWest(room1);
@@ -49,6 +49,7 @@ public class Map {
     }
 
     public Room getStarterRoom() {
+
         return room1;
     }
 

@@ -69,6 +69,12 @@ public class Room {
     public void addItems (Item item){
         items.add(item);
     }
+
+    public ArrayList<Item> itemList () {
+        return items;
+    }
+
+
     public String getItem (String itemName){
         for (Item item : items) {
             if (item.getItemName().equals(itemName)) {

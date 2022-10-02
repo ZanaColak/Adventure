@@ -1,7 +1,10 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserInterface {
     private Adventure adventure = new Adventure(); //Metode kald
+
+    private Player player = new Player();
 
     private boolean gameRunning = true; // erklære gamerunning til true
     private Scanner sc = new Scanner(System.in); // Scanner til bruger input
@@ -47,13 +50,17 @@ public class UserInterface {
                             """);
                     break;
                 case "inventory", "inv", "invent":
-
+                    System.out.println(player.inventoryList());
                     break;
                 case "take":
-
+                    System.out.println("Please enter the name of the item you want to take");
+                    String itemTake = sc.nextLine();
+                    player.takeItem(itemTake);
                     break;
                 case "drop":
-
+                    System.out.println("Please enter the name of the item you want to drop");
+                    String itemDrop = sc.nextLine();
+                    player.dropItem(itemDrop);
                     break;
                 case "exit":
                     System.out.println("Exiting program..");
@@ -62,7 +69,7 @@ public class UserInterface {
         }
     }
     public void lookRoom() {
-        System.out.println("You are in " + adventure.player.getCurrentRoom().getName() + "\n" + adventure.player.getCurrentRoom().getDescription());
+        System.out.println("You are in " + adventure.player.getCurrentRoom().getName() + "\n" + adventure.player.getCurrentRoom().getDescription() + "\n" + "In the room you see: " + showRoomItems(player.getCurrentRoom()) /*player.getCurrentRoom().itemList()*/);
     }
 
     public void handleRoomDirection(boolean goDirection, String direction) {
@@ -71,5 +78,12 @@ public class UserInterface {
         } else {
             System.out.println("You cannot go this way");
         }
+    }
+
+    public String showRoomItems (Room room) {
+        for (Item item : room.itemList()) {
+            return item.getItemName();
+        }
+        return null;
     }
 }

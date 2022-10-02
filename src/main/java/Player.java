@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Player {
 
@@ -12,16 +12,42 @@ public class Player {
     }
 
     public void setCurrentRoom(Room currentRoom) {
+
         this.currentRoom = currentRoom;
     }
-    public void dropItem (){
 
+    public ArrayList<Item> inventoryList () {
+        return inventory;
     }
-    public void takeItem (String name){
 
+    public void dropItem (String itemName){
+        for (int i = 0; i < inventory.size(); i++){
+            Item item = inventory.get(i);
+            if (item.getItemName().equals(itemName)) {
+                inventory.remove(item);
+                currentRoom.getItem(itemName);
+                System.out.println("Item removed from inventory");
+            }
+            else {
+                System.out.println("Item in inventory not found");
+            }
+        }
+    }
+
+    public void takeItem (String itemName){
+        for (int i = 0; i < currentRoom.itemList().size(); i++){
+            Item item = currentRoom.itemList().get(i);
+            if (item.getItemName().equals(itemName)) {
+                inventory.add(item);
+                currentRoom.itemList().remove(itemName);
+                System.out.println("Item added to inventory");
+            }
+            else {
+                System.out.println("Item in room not found");
+            }
+        }
         //TODO
-        Item findItem = currentRoom.findItem(name);
-        inventory.add(findItem);
-        currentRoom.getItem(name).remove(findItem);
+        /*Item findItem = currentRoom.findItem(name);
+        inventory.add(findItem);*/
     }
 }
