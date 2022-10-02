@@ -10,6 +10,8 @@ public class Map {
     Room room8 = new Room("Room 8 ", "Room with no distinct features, East & West & North");
     Room room9 = new Room("Room 9 ", "Room with no distinct features, North & West");
 
+    Item item1 = new Item("Coin");
+    Item item2 = new Item("Torch");
     public Map() {
 
         // Room bliver forbundet med en setmetode

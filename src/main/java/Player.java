@@ -17,12 +17,11 @@ public class Player {
     public void dropItem (){
 
     }
-    public void takeItem (String name, String description){
+    public void takeItem (String name){
 
         //TODO
         Item findItem = currentRoom.findItem(name);
         inventory.add(findItem);
-        currentRoom.getItems().remove(findItem);
-
+        currentRoom.getItem(name).remove(findItem);
     }
 }

@@ -46,6 +46,15 @@ public class UserInterface {
                             You can close the game by typing exit.
                             """);
                     break;
+                case "inventory", "inv", "invent":
+
+                    break;
+                case "take":
+
+                    break;
+                case "drop":
+
+                    break;
                 case "exit":
                     System.out.println("Exiting program..");
                     gameRunning = false;
