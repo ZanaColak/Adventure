@@ -66,6 +66,9 @@ public class Room {
     public Room getSouth() {
         return south;
     }
+    public void addItems (Item item){
+        items.add(item);
+    }
     public String getItem (String itemName){
         for (Item item : items) {
             if (item.getItemName().equals(itemName)) {
