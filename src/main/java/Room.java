@@ -7,6 +7,7 @@ public class Room {
     private Room east;
     private Room west;
     private Room south;
+    private String item;
 
     private ArrayList<Item> items = new ArrayList<Item>();
 
@@ -65,14 +66,14 @@ public class Room {
     public Room getSouth() {
         return south;
     }
-    /*public String getItem (){
-        return
+    public String getItem (){
+        return item;
     }
     public Item findItem (String name){
         for (Item item : items) {
             if (Item.getS.equalsIgnoreCase(item)) ;
             return item;
         }
-    }*/
+    }
 }
 
