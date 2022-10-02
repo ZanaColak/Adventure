@@ -65,13 +65,14 @@ public class Room {
     public Room getSouth() {
         return south;
     }
-    public String getItem (){
+    /*public String getItem (){
         return
     }
-}
     public Item findItem (String name){
         for (Item item : items) {
-            if (Item.getS.equalsIgnoreCase(hero)) ;
-            return superhero;
-    }
+            if (Item.getS.equalsIgnoreCase(item)) ;
+            return item;
+        }
+    }*/
 }
+
