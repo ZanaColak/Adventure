@@ -16,14 +16,16 @@ public class Player {
         this.currentRoom = currentRoom;
     }
 
+
     public ArrayList<Item> getInventoryList () {
         return inventory;
     }
 
+
     public void dropItem (String itemName){
         for (int i = 0; i < getInventoryList().size(); i++){
             Item item = getInventoryList().get(i);
-            if (item.getItemName().equals(itemName)) {
+            if (item != null) {
                 inventory.remove(item);
                 currentRoom.getItemList().add(item);
                 System.out.println("Item removed from inventory");
@@ -34,10 +36,10 @@ public class Player {
         }
     }
 
+
     public void takeItem (String itemName){
-        for (int i = 0; i < currentRoom.getItemList().size(); i++){
-            Item item = currentRoom.getItemList().get(i);
-            if (item.getItemName().equals(itemName)) {
+            Item item = currentRoom.findItem(itemName);
+            if (item != null) {
                 inventory.add(item);
                 currentRoom.removeItem(item);
                 System.out.println("Item added to inventory");
@@ -45,7 +47,7 @@ public class Player {
             else {
                 System.out.println("Item in room not found");
             }
-        }
+
         //TODO
         /*Item findItem = currentRoom.findItem(name);
         inventory.add(findItem);*/
