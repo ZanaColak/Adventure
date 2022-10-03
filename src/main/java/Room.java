@@ -70,9 +70,18 @@ public class Room {
         items.add(item);
     }
 
+    public void addItemToRoom (Room room, String itemName) {
+        room.addItem(new Item(itemName));
+    }
+
+    public void addItemToRoom (String itemName) {
+        items.add(new Item(itemName));
+    }
+
     public ArrayList<Item> getItemList () {
         return items;
     }
+
 
     public void removeItem (Item item) {
                 items.remove(item);
@@ -93,6 +102,11 @@ public class Room {
             }
         }
     return null;
+    }
+
+    @Override
+    public String toString() {
+        return "Items: " + items + " \n";
     }
 }
 
