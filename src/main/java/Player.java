@@ -6,7 +6,7 @@ public class Player {
     private Room currentRoom = map.getStarterRoom(); //Initialiserer currentRoom som starterRoom.
 
     private ArrayList<Item> inventory = new ArrayList<>();
-
+//
     public Room getCurrentRoom() {
         return currentRoom;
     }
