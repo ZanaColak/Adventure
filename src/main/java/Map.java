@@ -47,6 +47,8 @@ public class Map {
         room3.addItemToRoom("rusty sword");
         room4.addItemToRoom("shoes");
         room5.addItemToRoom("treasure chest");
+        room7.addItemToRoom("shield");
+        room9.addItemToRoom("spiders");
     }
 
     public Room getStarterRoom() {

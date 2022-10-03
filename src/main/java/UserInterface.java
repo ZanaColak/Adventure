@@ -54,12 +54,14 @@ public class UserInterface {
                 case "take":
                     System.out.println("Please enter the name of the item you want to take");
                     String itemTake = sc.nextLine().toLowerCase();
-                    adventure.player.takeItem(itemTake);
+                    if (adventure.player.takeItem(itemTake) == true) {System.out.println("Item added to inventory");}
+                    else {System.out.println("Item was not found in this room");}
                     break;
                 case "drop":
                     System.out.println("Please enter the name of the item you want to drop");
                     String itemDrop = sc.nextLine().toLowerCase();
-                    adventure.player.dropItem(itemDrop);
+                    if (adventure.player.dropItem(itemDrop) == true) {System.out.println("Item removed from inventory");}
+                    else {System.out.println("Item was not found in your inventory");}
                     break;
                 case "exit":
                     System.out.println("Ending adventure..");
@@ -69,15 +71,12 @@ public class UserInterface {
     }
 
     public void lookRoom() {
-        //Room currentRoom = adventure.player.getCurrentRoom();
         System.out.println("You are in " + showRoomItems(adventure.player.getCurrentRoom()/*currentRoom*/));
-        //System.out.println("You are in " + currentRoom.getName() + "\n" + currentRoom.getDescription() + "\n" + "In the room you see " + showRoomItems(currentRoom));
     }
 
     public void handleRoomDirection(boolean goDirection) {
         if (goDirection) {
             System.out.println("You are going to " + showRoomItems(adventure.player.getCurrentRoom()));
-            //System.out.println("You are going: " + direction + "\nYou are now in " + adventure.player.getCurrentRoom().getName() + "\n" + adventure.player.getCurrentRoom().getDescription() + "\n" + "In the room you see " + showRoomItems(adventure.player.getCurrentRoom()));
         } else {
             System.out.println("You cannot go this way");
         }
@@ -98,5 +97,4 @@ public class UserInterface {
             System.out.println(item.getItemName());
         }
     }
-
 }

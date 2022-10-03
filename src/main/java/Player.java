@@ -57,31 +57,29 @@ public class Player {
         }
     }
 
-    public void dropItem (String itemName){
-        for (int i = 0; i < getInventoryList().size(); i++){
+    public boolean dropItem (String itemName){
+        boolean isNull = false;
+        for (int i = 0; i < getInventoryList().size(); i++) {
             Item item = getInventoryList().get(i);
             if (item.getItemName().equals(itemName)) {
                 inventory.remove(item);
                 currentRoom.getItemList().add(item);
-                System.out.println("Item removed from inventory");
-            }
-            else {
-                System.out.println("Item in inventory not found");
+                isNull = true;
             }
         }
+        return isNull;
     }
 
 
-    public void takeItem (String itemName){
+    public boolean takeItem (String itemName){
+            boolean isNull = false;
             Item item = currentRoom.findItem(itemName);
             if (item != null) {
                 inventory.add(item);
                 currentRoom.removeItem(item);
-                System.out.println("Item added to inventory");
+                isNull = true;
             }
-            else {
-                System.out.println("Item in room not found");
-            }
+            return isNull;
 
         //TODO
         /*Item findItem = currentRoom.findItem(name);
