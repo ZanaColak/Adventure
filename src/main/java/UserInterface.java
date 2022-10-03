@@ -20,23 +20,23 @@ public class UserInterface {
             switch (userInput) {
                 case "go north", "north", "n":
                     boolean goNorth;
-                    goNorth = adventure.goNorth();
-                    handleRoomDirection(goNorth, "North");
+                    goNorth = adventure.player.goNorth();
+                    handleRoomDirection(goNorth);
                     break;
                 case "go east", "east", "e":
                     boolean goEast;
-                    goEast = adventure.goEast();
-                    handleRoomDirection(goEast, "East");
+                    goEast = adventure.player.goEast();
+                    handleRoomDirection(goEast);
                     break;
                 case "go west", "west", "w":
                     boolean goWest;
-                    goWest = adventure.goWest();
-                    handleRoomDirection(goWest, "West");
+                    goWest = adventure.player.goWest();
+                    handleRoomDirection(goWest);
                     break;
                 case "go south", "south", "s":
                     boolean goSouth;
-                    goSouth = adventure.goSouth();
-                    handleRoomDirection(goSouth, "South");
+                    goSouth = adventure.player.goSouth();
+                    handleRoomDirection(goSouth);
                     break;
                 case "look":
                     lookRoom();
@@ -69,13 +69,15 @@ public class UserInterface {
     }
 
     public void lookRoom() {
-        Room currentRoom = adventure.player.getCurrentRoom();
-        System.out.println("You are in " + currentRoom.getName() + "\n" + currentRoom.getDescription() + "\n" + "In the room you see: " + showRoomItems(currentRoom));
+        //Room currentRoom = adventure.player.getCurrentRoom();
+        System.out.println("You are in " + showRoomItems(adventure.player.getCurrentRoom()/*currentRoom*/));
+        //System.out.println("You are in " + currentRoom.getName() + "\n" + currentRoom.getDescription() + "\n" + "In the room you see " + showRoomItems(currentRoom));
     }
 
-    public void handleRoomDirection(boolean goDirection, String direction) {
+    public void handleRoomDirection(boolean goDirection) {
         if (goDirection) {
-            System.out.println("You are going: " + direction + "\nYou are now in " + adventure.player.getCurrentRoom().getName() + "\n" + adventure.player.getCurrentRoom().getDescription() + "\n" + "In the room you see: " + showRoomItems(adventure.player.getCurrentRoom()));
+            System.out.println("You are going to " + showRoomItems(adventure.player.getCurrentRoom()));
+            //System.out.println("You are going: " + direction + "\nYou are now in " + adventure.player.getCurrentRoom().getName() + "\n" + adventure.player.getCurrentRoom().getDescription() + "\n" + "In the room you see " + showRoomItems(adventure.player.getCurrentRoom()));
         } else {
             System.out.println("You cannot go this way");
         }

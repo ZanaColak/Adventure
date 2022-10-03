@@ -7,7 +7,6 @@ public class Room {
     private Room east;
     private Room west;
     private Room south;
-    private String item;
 
     private ArrayList<Item> items = new ArrayList<>();
 
@@ -70,9 +69,6 @@ public class Room {
         items.add(item);
     }
 
-    public void addItemToRoom (Room room, String itemName) {
-        room.addItem(new Item(itemName));
-    }
 
     public void addItemToRoom (String itemName) {
         items.add(new Item(itemName));
@@ -106,7 +102,7 @@ public class Room {
 
     @Override
     public String toString() {
-        return "Items: " + items + " \n";
+        return name + "\n" + description + "\n" + "Items: " + items + " \n";
     }
 }
 

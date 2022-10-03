@@ -12,7 +12,6 @@ public class Player {
     }
 
     public void setCurrentRoom(Room currentRoom) {
-
         this.currentRoom = currentRoom;
     }
 
@@ -21,11 +20,47 @@ public class Player {
         return inventory;
     }
 
+    //Metode til at flytte forskellige retninger
+    public boolean goNorth() {
+        if (currentRoom.getNorth() == null) {
+            return false;
+        } else {
+            setCurrentRoom(currentRoom.getNorth());
+            return true;
+        }
+    }
+
+    public boolean goEast() {
+        if (currentRoom.getEast() == null) {
+            return false;
+        } else {
+            setCurrentRoom(currentRoom.getEast());
+            return true;
+        }
+    }
+
+    public boolean goWest() {
+        if (currentRoom.getWest() == null) {
+            return false;
+        } else {
+            setCurrentRoom(currentRoom.getWest());
+            return true;
+        }
+    }
+
+    public boolean goSouth() {
+        if (currentRoom.getSouth() == null) {
+            return false;
+        } else {
+            setCurrentRoom(currentRoom.getSouth());
+            return true;
+        }
+    }
 
     public void dropItem (String itemName){
         for (int i = 0; i < getInventoryList().size(); i++){
             Item item = getInventoryList().get(i);
-            if (item != null) {
+            if (item.getItemName().equals(itemName)) {
                 inventory.remove(item);
                 currentRoom.getItemList().add(item);
                 System.out.println("Item removed from inventory");
