@@ -10,15 +10,15 @@ public class Map {
     Room room8 = new Room("Room 8 ", "Room with no distinct features, East & West & North");
     Room room9 = new Room("Room 9 ", "Room with no distinct features, North & West");
 
-    Item item1 = new Item("bag");
-    Item item2 = new Item("torch");
-    Item item3 = new Item("coin");
-    Item item4 = new Item("rusty sword");
-    Item item5 = new Item("treasure chest");
-    Item item6 = new Item("lost shoes");
-    Item item7 = new Item("hat");
-    Item item8 = new Item("teddy bear");
-    Item item9 = new Item("painting");
+    Item item1 = new Item("Bag");
+    Item item2 = new Item("Torch");
+    Item item3 = new Item("Coin");
+    Item item4 = new Item("Rusty sword");
+    Item item5 = new Item("Treasure chest");
+    Item item6 = new Item("Lost shoes");
+    Item item7 = new Item("Hat");
+    Item item8 = new Item("Teddy bear");
+    Item item9 = new Item("Painting");
     public Map() {
 
         // Room bliver forbundet med en setmetode
@@ -67,3 +67,4 @@ public class Map {
     }
 
 }
+
