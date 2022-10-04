@@ -2,11 +2,13 @@ import java.util.*;
 
 public class Player {
 
-    Map map = new Map();
+    Map map = new Map(); //Method call
+
+    //TODO (Virker ikke)
+    Food food = new Food();
     private Room currentRoom = map.getStarterRoom(); //Initialiserer currentRoom som starterRoom.
 
     private ArrayList<Item> inventory = new ArrayList<>();
-//
     public Room getCurrentRoom() {
         return currentRoom;
     }
