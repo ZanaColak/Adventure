@@ -49,14 +49,17 @@ public class Map {
         room5.addItemToRoom("treasure chest");
         room7.addItemToRoom("shield");
         room9.addItemToRoom("spiders");
+
+        //Food Objects
+       /* Food food1 = new Food("Apple");
+        Food food2 = new Food("Banana");
+        Food food3 = new Food("Mushrooms with poison");
+        Food food4 = new Food("Big Mac");
+        Food food5 = new Food("Berries with posion ");
+        Food food6 = new Food("Shawarma");
+        */
+
     }
-    //Food Objects
-    Food food1 = new Food("Apple");
-    Food food2 = new Food("Banana");
-    Food food3 = new Food("Mushrooms with poison");
-    Food food4 = new Food("Big Mac");
-    Food food5 = new Food("Berries with posion ");
-    Food food6 = new Food("Shawarma");
 
     public Room getStarterRoom() {
         return room1;
