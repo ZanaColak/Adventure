@@ -4,7 +4,6 @@ public class UserInterface {
     private Adventure adventure = new Adventure(); //Metode kald
 
     private Player player = new Player();
-
     private boolean gameRunning = true; // erklære gamerunning til true
     private Scanner sc = new Scanner(System.in); // Scanner til bruger input
 
