@@ -58,8 +58,19 @@ public class Map {
         Food food5 = new Food("Berries with posion ");
         Food food6 = new Food("Shawarma");
         */
+        room1.addItemToRoom("Apple");
+        room3.addItemToRoom("Banana");
+        room4.addItemToRoom("Shawarma");
+        room5.addItemToRoom("Berries with poison");
+        room7.addItemToRoom("Mushrooms woth poison");
+        room9.addItemToRoom("Big mac");
+
 
     }
+
+
+
+
 
     public Room getStarterRoom() {
         return room1;
