@@ -40,10 +40,10 @@ public class Map {
         room9.setNorth(room6);
         room9.setWest(room8);
 
-        room1.addItemToRoom( "bag");
-        room1.addItemToRoom( "insect");
-        room2.addItemToRoom( "torch");
-        room2.addItemToRoom( "coin");
+        room1.addItemToRoom("bag");
+        room1.addItemToRoom("insect");
+        room2.addItemToRoom("torch");
+        room2.addItemToRoom("coin");
         room3.addItemToRoom("rusty sword");
         room4.addItemToRoom("shoes");
         room5.addItemToRoom("treasure chest");
@@ -51,12 +51,12 @@ public class Map {
         room9.addItemToRoom("spiders");
 
         //Food Objects
-        room1.addItemToRoom("Apple");
-        room3.addItemToRoom("Banana");
-        room4.addItemToRoom("Shawarma");
-        room5.addItemToRoom("Berries with poison");
-        room7.addItemToRoom("Mushrooms woth poison");
-        room9.addItemToRoom("Big mac");
+        room1.addFoodToRoom("Apple");
+        room3.addFoodToRoom("Banana");
+        room4.addFoodToRoom("Shawarma");
+        room5.addFoodToRoom("Berries with poison");
+        room7.addFoodToRoom("Mushrooms woth poison");
+        room9.addFoodToRoom("Big mac");
 
 
     }

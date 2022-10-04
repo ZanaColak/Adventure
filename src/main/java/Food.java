@@ -1,7 +1,11 @@
-public class Food extends Item{
-    private int healthValue;
-    public Food(String itemName, int healthValue) {
+public class Food extends Item {
+    private int health;
+
+    public Food(String itemName, int health) {
         super(itemName);
-        this.healthValue = healthValue;
+        this.health = health;
+    }
+    public String toString (){
+        return super.toString() + " " + health;
     }
 }

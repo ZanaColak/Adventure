@@ -65,25 +65,30 @@ public class Room {
     public Room getSouth() {
         return south;
     }
-    public void addItem (Item item){
+
+    public void addItem(Item item) {
         items.add(item);
     }
 
 
-    public void addItemToRoom (String itemName) {
+    public void addItemToRoom(String itemName) {
         items.add(new Item(itemName));
     }
 
-    public ArrayList<Item> getItemList () {
+    public void addFoodToRoom(String foodName) {
+        items.add(new Item(foodName));
+    }
+
+    public ArrayList<Item> getItemList() {
         return items;
     }
 
 
-    public void removeItem (Item item) {
-                items.remove(item);
+    public void removeItem(Item item) {
+        items.remove(item);
     }
 
-    public String getItem (String itemName){
+    public String getItem(String itemName) {
         for (Item item : items) {
             if (item.getItemName().equals(itemName)) {
                 items.add(item);
@@ -91,13 +96,14 @@ public class Room {
         }
         return null;
     }
-    public Item findItem (String itemName){
+
+    public Item findItem(String itemName) {
         for (Item item : items) {
             if (item.getItemName().equals(itemName)) {
                 return item;
             }
         }
-    return null;
+        return null;
     }
 
     @Override
