@@ -6,6 +6,7 @@ public class Player {
     private Room currentRoom = map.getStarterRoom(); //Initialiserer currentRoom som starterRoom.
 
     private ArrayList<Item> inventory = new ArrayList<>();
+
     public Room getCurrentRoom() {
         return currentRoom;
     }
@@ -15,7 +16,7 @@ public class Player {
     }
 
 
-    public ArrayList<Item> getInventoryList () {
+    public ArrayList<Item> getInventoryList() {
         return inventory;
     }
 
@@ -56,7 +57,7 @@ public class Player {
         }
     }
 
-    public boolean dropItem (String itemName){
+    public boolean dropItem(String itemName) {
         boolean isNull = false;
         for (int i = 0; i < getInventoryList().size(); i++) {
             Item item = getInventoryList().get(i);
@@ -70,18 +71,27 @@ public class Player {
     }
 
 
-    public boolean takeItem (String itemName){
-            boolean isNull = false;
-            Item item = currentRoom.findItem(itemName);
-            if (item != null) {
-                inventory.add(item);
-                currentRoom.removeItem(item);
-                isNull = true;
-            }
-            return isNull;
+    public boolean takeItem(String itemName) {
+        boolean isNull = false;
+        Item item = currentRoom.findItem(itemName);
+        if (item != null) {
+            inventory.add(item);
+            currentRoom.removeItem(item);
+            isNull = true;
+        }
+        return isNull;
 
         //TODO
         /*Item findItem = currentRoom.findItem(name);
         inventory.add(findItem);*/
     }
+
+    public boolean eat() {
+
+    }
+
+    public boolean health() {
+
+    }
+
 }
