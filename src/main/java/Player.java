@@ -82,12 +82,16 @@ public class Player {
         return isNull;
     }
 
-  /*  public boolean eat() {
+   public boolean eat(String itemEat) {
+        Food food = (currentRoom.findItem(itemEat);
+        if (food != null) {
+            inventory.add(itemEat);
+            currentRoom.removeItem(itemEat);
+        }
+        return false;
 
     }
 
     public boolean health() {
-
     }
-*/
 }
