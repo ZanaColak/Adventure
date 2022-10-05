@@ -4,7 +4,6 @@ public class UserInterface {
     private Adventure adventure = new Adventure(); //Metode kald
 
     private Player player = new Player();
-
     private boolean gameRunning = true; // erklære gamerunning til true
     private Scanner sc = new Scanner(System.in); // Scanner til bruger input
 
@@ -45,6 +44,8 @@ public class UserInterface {
                     System.out.println("""
                             You can choose to go north, east, south or west.
                             You can type look to see the current room's description.
+                            You can type health to see the players health.
+                            You can type eat to make the player eat.
                             You can close the game by typing exit.
                             """);
                     break;
@@ -54,26 +55,40 @@ public class UserInterface {
                 case "take":
                     System.out.println("Please enter the name of the item you want to take");
                     String itemTake = sc.nextLine().toLowerCase();
-                    if (adventure.player.takeItem(itemTake) == true) {System.out.println("Item added to inventory");}
-                    else {System.out.println("Item was not found in this room");}
+                    if (adventure.player.takeItem(itemTake) == true) {
+                        System.out.println("Item added to inventory");
+                    } else {
+                        System.out.println("Item was not found in this room");
+                    }
                     break;
                 case "drop":
                     System.out.println("Please enter the name of the item you want to drop");
                     String itemDrop = sc.nextLine().toLowerCase();
-                    if (adventure.player.dropItem(itemDrop) == true) {System.out.println("Item removed from inventory");}
-                    else {System.out.println("Item was not found in your inventory");}
+                    if (adventure.player.dropItem(itemDrop) == true) {
+                        System.out.println("Item removed from inventory");
+                    } else {
+                        System.out.println("Item was not found in your inventory");
+                    }
                     break;
                 case "exit":
                     System.out.println("Ending adventure..");
                     gameRunning = false;
                     break;
-                case "eat":
-                    System.out.println();
-                    String itemEat = sc.nextLine().toLowerCase();
-                    if (adventure.player.eat(itemEat) == true) {System.out.println("Food added to inventory");}
-                    else {System.out.println("Food   was not found in this room");}
-                case "health":
-                    System.out.println();
+                //case "eat":
+                    //System.out.println();
+                //    String itemEat = sc.nextLine().toLowerCase();
+                //    if (adventure.player.eat(itemEat) == true) {
+                //        System.out.println("Item added to inventory");
+                //    } else {
+                //        System.out.println("Item was not found in this room");
+                //    }
+                //case "health":
+                //    String health = sc.nextLine().toLowerCase();
+                //    if (adventure.player.health() == true)
+                //    System.out.println();
+                //    break;
+                //default:
+                //    System.out.println("Wrong input, try again");
             }
         }
     }
@@ -97,7 +112,7 @@ public class UserInterface {
         return room.toString();
     }
 
-    public void showPlayerItems () {
+    public void showPlayerItems() {
         if (adventure.player.getInventoryList().isEmpty()) {
             System.out.println("Inventory is empty");
         }

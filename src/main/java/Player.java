@@ -80,23 +80,14 @@ public class Player {
             isNull = true;
         }
         return isNull;
-
-        //TODO
-        /*Item findItem = currentRoom.findItem(name);
-        inventory.add(findItem);*/
     }
 
-    public boolean eat(String itemEat) {
-        Food food = (Food) currentRoom.findItem(itemEat);
-        if (food != null) {
-            inventory.add(itemEat);
-            currentRoom.removeItem();
-        }
+  /*  public boolean eat() {
 
     }
 
     public boolean health() {
 
     }
-
+*/
 }

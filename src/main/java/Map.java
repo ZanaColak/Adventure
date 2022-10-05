@@ -40,10 +40,10 @@ public class Map {
         room9.setNorth(room6);
         room9.setWest(room8);
 
-        room1.addItemToRoom( "bag");
-        room1.addItemToRoom( "insect");
-        room2.addItemToRoom( "torch");
-        room2.addItemToRoom( "coin");
+        room1.addItemToRoom("bag");
+        room1.addItemToRoom("insect");
+        room2.addItemToRoom("torch");
+        room2.addItemToRoom("coin");
         room3.addItemToRoom("rusty sword");
         room4.addItemToRoom("shoes");
         room5.addItemToRoom("treasure chest");
@@ -51,26 +51,15 @@ public class Map {
         room9.addItemToRoom("spiders");
 
         //Food Objects
-       /* Food food1 = new Food("Apple");
-        Food food2 = new Food("Banana");
-        Food food3 = new Food("Mushrooms with poison");
-        Food food4 = new Food("Big Mac");
-        Food food5 = new Food("Berries with posion ");
-        Food food6 = new Food("Shawarma");
-        */
-        room1.addFoodToRoom("Apple", );
-        room3.addFoodToRoom("Banana");
-        room4.addFoodToRoom("Shawarma");
-        room5.addFoodToRoom("Berries with poison");
-        room7.addFoodToRoom("Mushrooms woth poison");
-        room9.addFoodToRoom("Big mac");
+        room1.addFoodToRoom("apple");
+        room3.addFoodToRoom("banana");
+        room4.addFoodToRoom("shawarma");
+        room5.addFoodToRoom("berries with poison");
+        room7.addFoodToRoom("mushrooms woth poison");
+        room9.addFoodToRoom("big mac");
 
 
     }
-
-
-
-
 
     public Room getStarterRoom() {
         return room1;

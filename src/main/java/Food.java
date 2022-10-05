@@ -1,9 +1,11 @@
-public class Food extends Item{
-    private int healthPoints;
-    public Food(String itemName, int healthPoints) {
-        super(itemName);
-        this.healthPoints = healthPoints;
+public class Food extends Item {
+    private int health;
 
+    public Food(String itemName, int health) {
+        super(itemName);
+        this.health = health;
     }
-food
+    public String toString (){
+        return super.toString() + " " + health;
+    }
 }
