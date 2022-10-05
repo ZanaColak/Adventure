@@ -70,8 +70,8 @@ public class UserInterface {
                 case "eat":
                     System.out.println();
                     String itemEat = sc.nextLine().toLowerCase();
-                    if (adventure.player.eat(itemEat) == true) {System.out.println("Item added to inventory");}
-                    else {System.out.println("Item was not found in this room");}
+                    if (adventure.player.eat(itemEat) == true) {System.out.println("Food added to inventory");}
+                    else {System.out.println("Food   was not found in this room");}
                 case "health":
                     System.out.println();
             }

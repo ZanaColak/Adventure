@@ -86,7 +86,12 @@ public class Player {
         inventory.add(findItem);*/
     }
 
-    public boolean eat() {
+    public boolean eat(String itemEat) {
+        Food food = (Food) currentRoom.findItem(itemEat);
+        if (food != null) {
+            inventory.add(itemEat);
+            currentRoom.removeItem();
+        }
 
     }
 

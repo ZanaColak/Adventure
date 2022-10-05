@@ -73,6 +73,9 @@ public class Room {
     public void addItemToRoom (String itemName) {
         items.add(new Item(itemName));
     }
+    public void addFoodToRoom (String foodName, int healthPoints) {
+        items.add(new Food(foodName, healthPoints));
+    }
 
     public ArrayList<Item> getItemList () {
         return items;
@@ -104,6 +107,7 @@ public class Room {
     public String toString() {
         return name + "\n" + description + "\n" + "Items: " + items + " \n";
     }
+
 
 }
 
