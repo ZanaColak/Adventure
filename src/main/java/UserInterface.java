@@ -85,6 +85,12 @@ public class UserInterface {
                 case "health":
                     System.out.println(adventure.player.getHealthPoints());
                     break;
+                case "equip":
+                    //Something here
+                    break;
+                case "attack":
+                    //Something here
+                    break;
                 default:
                     System.out.println("Wrong input, try again");
             }

@@ -57,9 +57,14 @@ public class Map {
         room5.addFoodToRoom("berries with poison", -48);
         room7.addFoodToRoom("mushrooms woth poison", -79);
         room9.addFoodToRoom("big mac", 32);
-        //
 
-
+        //Weapons objects
+        room1.addWeaponsToRoom("knife");
+        room3.addWeaponsToRoom("ak-47");
+        room4.addWeaponsToRoom("kali-sticks");
+        room5.addWeaponsToRoom("sniper");
+        room7.addWeaponsToRoom("m-13");
+        room9.addWeaponsToRoom("desert eagle");
     }
 
     public Room getStarterRoom() {

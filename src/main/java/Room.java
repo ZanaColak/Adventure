@@ -70,12 +70,15 @@ public class Room {
         items.add(item);
     }
 
-
     public void addItemToRoom(String itemName) {
         items.add(new Item(itemName));
     }
-    public void addFoodToRoom (String foodName, int health) {
+
+    public void addFoodToRoom(String foodName, int health) { //adder food objekter til map klassen
         items.add(new Food(foodName, health));
+    }
+    public void addWeaponsToRoom(String weaponName){ //Adder vi våben objekter til map klassen
+        items.add(new Weapon(weaponName));
     }
 
     public ArrayList<Item> getItemList() {
@@ -96,7 +99,7 @@ public class Room {
         return null;
     }
 
-   public Item findItem(String itemName) {
+    public Item findItem(String itemName) {
         for (Item item : items) {
             if (item.getItemName().equals(itemName)) {
                 return item;
