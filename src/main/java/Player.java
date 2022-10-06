@@ -2,6 +2,8 @@ import java.util.*;
 
 public class Player {
 
+    private int healthPoints = 100;
+
     Map map = new Map(); //Method call
     private Room currentRoom = map.getStarterRoom(); //Initialiserer currentRoom som starterRoom.
 
@@ -83,11 +85,19 @@ public class Player {
     }
 
    public boolean eat(String itemEat) {
-        Food food = (currentRoom.findItem(itemEat);
+        Item item = currentRoom.findItem(itemEat);
+        if (item instanceof Food){
+            Food food = (Food) item;
+            if (food != null) {
+                healthPoints += food.getHealth();
+                currentRoom.removeItem(food);
+            }
+        }
+        /*Food food = (Food) currentRoom.findItem(itemEat);
         if (food != null) {
             inventory.add(itemEat);
             currentRoom.removeItem(itemEat);
-        }
+        }*/
         return false;
 
     }
