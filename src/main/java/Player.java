@@ -61,6 +61,20 @@ public class Player {
             return true;
         }
     }
+    public int getHealthPoints() { //Get method to healthPoitns
+        return healthPoints;
+    }
+    public Item findItem(String itemName) {
+        for (Item item : inventory) {
+            if (item.getItemName().equals(itemName)) {
+                return item;
+            }
+        }
+        return null;
+    }
+    public void removeItem(Item item) {
+        inventory.remove(item);
+    }
 
     public boolean dropItem(String itemName) { // Method to drop items
         boolean isNull = false;
@@ -85,26 +99,11 @@ public class Player {
         }
         return isNull;
     }
-    public Item findItem(String itemName) {
-        for (Item item : inventory) {
-            if (item.getItemName().equals(itemName)) {
-                return item;
-            }
-        }
-        return null;
-    }
-    public void removeItem(Item item) {
-        inventory.remove(item);
-    }
    public boolean checkFoodRoom(String itemEat) { //Method to check if the food is eatable
        Boolean isFood = false;
        Item item = currentRoom.findItem(itemEat);
-       //Food food = (Food) item;
        if (item instanceof Food) {
-           //Food food = (Food) item;
            if (item.getItemName().equals(itemEat)) {
-               /*healthPoints += food.getHealth();
-               currentRoom.removeItem(food);*/
                isFood = true;
            }
        }
@@ -134,7 +133,4 @@ public class Player {
        return eatItem;
    }
 
-    public int getHealthPoints() { //Get method to healthPoitns
-        return healthPoints;
-    }
 }

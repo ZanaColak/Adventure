@@ -11,7 +11,6 @@ public class Map {
     Room room9 = new Room("Room 9 ", "Room with no distinct features, North & West");
 
     public Map() {
-
         // Room bliver forbundet med en setmetode
         room1.setEast(room2);
         room1.setSouth(room4);
