@@ -51,12 +51,12 @@ public class Map {
         room9.addItemToRoom("spiders");
 
         //Food Objects
-        room1.addFoodToRoom("apple", 100);
-        room3.addFoodToRoom("banana", 99);
-        room4.addFoodToRoom("shawarma", 10);
-        room5.addFoodToRoom("berries with poison", 0);
-        room7.addFoodToRoom("mushrooms woth poison", 0);
-        room9.addFoodToRoom("big mac", 10);
+        room1.addFoodToRoom("apple", 56);
+        room3.addFoodToRoom("banana", 76);
+        room4.addFoodToRoom("shawarma", 47);
+        room5.addFoodToRoom("berries with poison", -48);
+        room7.addFoodToRoom("mushrooms woth poison", -79);
+        room9.addFoodToRoom("big mac", 32);
         //
 
 

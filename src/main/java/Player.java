@@ -21,6 +21,9 @@ public class Player {
     public ArrayList<Item> getInventoryList() {
         return inventory;
     }
+    public void playerHealth (){
+        System.out.println("Current health Status:" + healthPoints);
+    }
 
     //Metode til at flytte forskellige retninger
     public boolean goNorth() {
