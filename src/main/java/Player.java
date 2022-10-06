@@ -77,8 +77,7 @@ public class Player {
 
     public boolean takeItem(String itemName) { //Method to takeItems
         boolean isNull = false;
-        int index = inventory.indexOf();
-        Item item = in.findItem(itemName);
+        Item item = currentRoom.findItem(itemName);
         if (item != null) {
             inventory.add(item);
             currentRoom.removeItem(item);
@@ -86,8 +85,17 @@ public class Player {
         }
         return isNull;
     }
-
-
+    public Item findItem(String itemName) {
+        for (Item item : inventory) {
+            if (item.getItemName().equals(itemName)) {
+                return item;
+            }
+        }
+        return null;
+    }
+    public void removeItem(Item item) {
+        inventory.remove(item);
+    }
    public boolean checkFoodRoom(String itemEat) { //Method to check if the food is eatable
        Boolean isFood = false;
        Item item = currentRoom.findItem(itemEat);
@@ -116,16 +124,13 @@ public class Player {
 
    public boolean eat (String itemName){ //Eat Method
         boolean eatItem = false;
-        Item item = player.findItem(itemName);
+        Item item = findItem(itemName);
         if (checkFoodInventory(itemName)){
-            currentRoom.removeItem(item);
+            removeItem(item);
             Food food = (Food) item;
             healthPoints = healthPoints + ((Food) item).getHealth();
             eatItem = true;
         }
-       // if (checkFoodInventory(itemName)){
-
-        //}else return eatItem;
        return eatItem;
    }
 

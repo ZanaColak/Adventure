@@ -96,7 +96,7 @@ public class Room {
         return null;
     }
 
-    public Item findItem(String itemName) {
+   public Item findItem(String itemName) {
         for (Item item : items) {
             if (item.getItemName().equals(itemName)) {
                 return item;
@@ -104,6 +104,7 @@ public class Room {
         }
         return null;
     }
+
 
     @Override
     public String toString() {
