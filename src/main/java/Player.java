@@ -75,10 +75,10 @@ public class Player {
         return isNull;
     }
 
-
     public boolean takeItem(String itemName) { //Method to takeItems
         boolean isNull = false;
-        Item item = currentRoom.findItem(itemName);
+        int index = inventory.indexOf();
+        Item item = in.findItem(itemName);
         if (item != null) {
             inventory.add(item);
             currentRoom.removeItem(item);
@@ -86,6 +86,7 @@ public class Player {
         }
         return isNull;
     }
+
 
    public boolean checkFoodRoom(String itemEat) { //Method to check if the food is eatable
        Boolean isFood = false;
@@ -115,7 +116,7 @@ public class Player {
 
    public boolean eat (String itemName){ //Eat Method
         boolean eatItem = false;
-        Item item = currentRoom.findItem(itemName);
+        Item item = player.findItem(itemName);
         if (checkFoodInventory(itemName)){
             currentRoom.removeItem(item);
             Food food = (Food) item;
