@@ -5,6 +5,11 @@ public class Food extends Item {
         super(itemName);
         this.health = health;
     }
+
+    public int getHealth() {
+        return health;
+    }
+
     public String toString (){
         return super.toString() + " " + health;
     }
