@@ -94,7 +94,7 @@ public class UserInterface {
     }
 
     public void lookRoom() {
-        System.out.println("You are in " + showRoomItems(adventure.player.getCurrentRoom()/*currentRoom*/));
+        System.out.println("You are in " + showRoomItems(adventure.player.getCurrentRoom()));
     }
 
     public void handleRoomDirection(boolean goDirection) {
