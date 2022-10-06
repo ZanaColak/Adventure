@@ -116,14 +116,15 @@ public class Player {
    public boolean eat (String itemName){ //Eat Method
         boolean eatItem = false;
         Item item = currentRoom.findItem(itemName);
-        if (checkFoodRoom(itemName)){
+        if (checkFoodInventory(itemName)){
             currentRoom.removeItem(item);
             Food food = (Food) item;
             healthPoints = healthPoints + ((Food) item).getHealth();
+            eatItem = true;
         }
-        if (checkFoodInventory(itemName)){
+       // if (checkFoodInventory(itemName)){
 
-        }else return eatItem;
+        //}else return eatItem;
        return eatItem;
    }
 
