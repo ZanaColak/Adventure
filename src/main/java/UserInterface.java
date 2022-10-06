@@ -74,21 +74,21 @@ public class UserInterface {
                     System.out.println("Ending adventure..");
                     gameRunning = false;
                     break;
-                //case "eat":
-                    //System.out.println();
-                //    String itemEat = sc.nextLine().toLowerCase();
-                //    if (adventure.player.eat(itemEat) == true) {
-                //        System.out.println("Item added to inventory");
-                //    } else {
-                //        System.out.println("Item was not found in this room");
-                //    }
-                //case "health":
-                //    String health = sc.nextLine().toLowerCase();
-                //    if (adventure.player.health() == true)
-                //    System.out.println();
-                //    break;
-                //default:
-                //    System.out.println("Wrong input, try again");
+                case "eat":
+                    System.out.println();
+                    String itemEat = sc.nextLine().toLowerCase();
+                    if (adventure.player.eat(itemEat) == true) {
+                        System.out.println("Item added to inventory");
+                    } else {
+                        System.out.println("Item was not found in this room");
+                    }
+                case "health":
+                    String health = sc.nextLine().toLowerCase();
+                    if (adventure.player. == true)
+                    System.out.println();
+                    break;
+                default:
+                    System.out.println("Wrong input, try again");
             }
         }
     }
