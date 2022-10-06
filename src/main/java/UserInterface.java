@@ -75,17 +75,15 @@ public class UserInterface {
                     gameRunning = false;
                     break;
                 case "eat":
-                    System.out.println();
                     String itemEat = sc.nextLine().toLowerCase();
                     if (adventure.player.eat(itemEat) == true) {
-                        System.out.println("Item added to inventory");
+                        System.out.println("Food is eaten");
                     } else {
                         System.out.println("Item was not found in this room");
                     }
+                    break;
                 case "health":
-                    String health = sc.nextLine().toLowerCase();
-                    if (adventure.player. == true)
-                    System.out.println();
+                    System.out.println(adventure.player.getHealthPoints());
                     break;
                 default:
                     System.out.println("Wrong input, try again");
