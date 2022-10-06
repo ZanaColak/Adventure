@@ -57,6 +57,7 @@ public class Map {
         room5.addFoodToRoom("berries with poison", 0);
         room7.addFoodToRoom("mushrooms woth poison", 0);
         room9.addFoodToRoom("big mac", 10);
+        //
 
 
     }
