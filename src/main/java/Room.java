@@ -77,8 +77,8 @@ public class Room {
     public void addFoodToRoom(String foodName, int health) { //adder food objekter til map klassen
         items.add(new Food(foodName, health));
     }
-    public void addWeaponsToRoom(String weaponName){ //Adder vi våben objekter til map klassen
-        items.add(new Weapon(weaponName));
+    public void addWeaponsToRoom(String weaponName, int weaponDamage){ //Adder vi våben objekter til map klassen
+        items.add(new Weapon(weaponName, weaponDamage));
     }
 
     public ArrayList<Item> getItemList() {

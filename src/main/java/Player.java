@@ -132,5 +132,22 @@ public class Player {
         }
        return eatItem;
    }
+   public boolean equip (String weapon) { //Equip Method
+        boolean equipWeapon = false;
+       for (Item item : inventory) {
+           if (item instanceof Weapon) {
+               if (item.getItemName().equals(weapon)) {
+                   getInventoryList();
+                   removeItem(item);
+                   Weapon weapon1 = (Weapon) item;
+                   equipWeapon = true;
+               }
+           }
+       }
+       return equipWeapon;
+   }
+  // public boolean attack (){
+
+   //}
 
 }
