@@ -1,5 +1,16 @@
 public class RangedWeapon extends Weapon{
-    public RangedWeapon(String weaponName) {
-        super(weaponName);
+    private int weaponAmmo;
+    public RangedWeapon(String weaponName, int weaponDamage, int weaponAmmo) {
+        super(weaponName, weaponDamage);
+        this.weaponAmmo = weaponAmmo;
+    }
+
+    public int getWeaponAmmo() {
+        return weaponAmmo;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " " + weaponAmmo;
     }
 }

@@ -86,11 +86,11 @@ public class Room {
     }
 
 
-    public void removeItem(Item item) {
+    public void removeItem(Item item) { //Fjerner vi items
         items.remove(item);
     }
 
-    public String getItem(String itemName) {
+    public String getItem(String itemName) { //Get metode til items
         for (Item item : items) {
             if (item.getItemName().equals(itemName)) {
                 items.add(item);
@@ -99,7 +99,7 @@ public class Room {
         return null;
     }
 
-    public Item findItem(String itemName) {
+    public Item findItem(String itemName) { // Finder vi items
         for (Item item : items) {
             if (item.getItemName().equals(itemName)) {
                 return item;
@@ -110,7 +110,7 @@ public class Room {
 
 
     @Override
-    public String toString() {
+    public String toString() { //To String metode
         return name + "\n" + description + "\n" + "Items: " + items + " \n";
     }
 
