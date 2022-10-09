@@ -11,6 +11,6 @@ public class RangedWeapon extends Weapon{
 
     @Override
     public String toString() {
-        return super.toString() + " " + weaponAmmo;
+        return super.toString() + " " + " Weapon Damage: " + getWeaponDamage() + ", " + "Weapon Ammo: " + weaponAmmo;
     }
 }

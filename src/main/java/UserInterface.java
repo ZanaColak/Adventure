@@ -46,6 +46,8 @@ public class UserInterface {
                             You can type look to see the current room's description.
                             You can type health to see the players health.
                             You can type eat to make the player eat.
+                            Type equip for equipping a weapon.
+                            Type attack to attack an enemy.
                             You can close the game by typing exit.
                             """);
                     break;
@@ -86,7 +88,12 @@ public class UserInterface {
                     System.out.println(adventure.player.getHealthPoints());
                     break;
                 case "equip":
-                    //Something here
+                    String equipWeapon = sc.nextLine().toLowerCase();
+                    if (adventure.player.equip(equipWeapon) == true){
+                        System.out.println(equipWeapon + "Equipped");
+                    }else
+                        System.out.println("Item was not found in this room");
+                    //Not done yet
                     break;
                 case "attack":
                     //Something here

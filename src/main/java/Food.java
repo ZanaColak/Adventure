@@ -11,6 +11,6 @@ public class Food extends Item {
     }
 
     public String toString (){
-        return super.toString() + " " + health;
+        return super.toString() + "Health Value:  " + health;
     }
 }
