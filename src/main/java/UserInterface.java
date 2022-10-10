@@ -98,7 +98,7 @@ public class UserInterface {
                 case "attack":
                     //Something here
                     break;
-                default://
+                default:///
                     System.out.println("Wrong input, try again");
             }
         }
