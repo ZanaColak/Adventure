@@ -1,5 +1,4 @@
 public class Weapon extends Item {
-    private String weaponName;
     private int weaponDamage;
 
     public Weapon (String weaponName, int weaponDamage){
@@ -10,6 +9,6 @@ public class Weapon extends Item {
         return weaponDamage;
     }
     public String toString (){
-        return weaponName + " " + weaponDamage + " ";
+        return getItemName() + " " + weaponDamage + " ";
     }
 }
