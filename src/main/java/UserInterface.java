@@ -90,7 +90,7 @@ public class UserInterface {
                 case "equip":
                     String equipWeapon = sc.nextLine().toLowerCase();
                     if (adventure.player.equip(equipWeapon) == true){
-                        System.out.println(equipWeapon + "Equipped");
+                        System.out.println(equipWeapon + "equipped");
                     }else
                         System.out.println("Item was not found in this room");
                     //Not done yet

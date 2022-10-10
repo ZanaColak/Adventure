@@ -7,6 +7,8 @@ public class Player {
     Map map = new Map(); //Method call
     private Room currentRoom = map.getStarterRoom(); //Initialiserer currentRoom som starterRoom.
 
+    Item checkWeapon;
+
     private ArrayList<Item> inventory = new ArrayList<>(); //Arraylist til inventory
 
     public Room getCurrentRoom() {
@@ -134,18 +136,18 @@ public class Player {
    }
    public boolean equip (String weapon) { //Equip Method
         boolean equipWeapon = false;
-       for (Item item : inventory) {
+       for (int i = 0; i < inventory.size(); i++) {
+           Item item = getInventoryList().get(i);
            if (item instanceof Weapon) {
                if (item.getItemName().equals(weapon)) {
-                   getInventoryList();
                    removeItem(item);
-                   Weapon weapon1 = (Weapon) item;
+                   checkWeapon = item;
                    equipWeapon = true;
                }
            }
        }
        return equipWeapon;
-       //
+
    }
   // public boolean attack (){
 
