@@ -144,7 +144,7 @@ public class Player {
                    checkWeapon = item;
                    equipWeapon = true;
                }
-           }//
+           }
        }
        return equipWeapon;
 
