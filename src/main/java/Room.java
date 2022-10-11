@@ -77,10 +77,12 @@ public class Room {
     public void addFoodToRoom(String foodName, int health) { //adder food objekter til map klassen
         items.add(new Food(foodName, health));
     }
-    public void addWeaponsToRoom(String weaponName, int weaponDamage){ //Adder vi våben objekter til map klassen
-        items.add(new Weapon(weaponName, weaponDamage));
+    public void addMeleeWeaponsToRoom(String weaponName, int weaponDamage){ //Adder vi våben objekter til map klassen
+        items.add(new MeleeWeapon(weaponName, weaponDamage));
     }
-
+    public void addRangedWeaponsToRoom(String weaponName, int weaponDamage, int ammo){ //Adder vi våben objekter til map klassen
+        items.add(new RangedWeapon(weaponName, weaponDamage,ammo));
+    }
     public ArrayList<Item> getItemList() {
         return items;
     }

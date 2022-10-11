@@ -1,13 +1,12 @@
 import java.util.*;
 
 public class Player {
-
     private int healthPoints = 100; //Erklære healthpoints til 100
 
     Map map = new Map(); //Method call
     private Room currentRoom = map.getStarterRoom(); //Initialiserer currentRoom som starterRoom.
 
-    Item checkWeapon;
+    private Weapon equippedWeapon;
 
     private ArrayList<Item> inventory = new ArrayList<>(); //Arraylist til inventory
 
@@ -141,7 +140,7 @@ public class Player {
            if (item instanceof Weapon) {
                if (item.getItemName().equals(weapon)) {
                    removeItem(item);
-                   checkWeapon = item;
+                   equippedWeapon = (Weapon) item;
                    equipWeapon = true;
                }
            }
@@ -149,8 +148,15 @@ public class Player {
        return equipWeapon;
 
    }
-  // public boolean attack (){
+   public boolean attack (){
+        int uses = equippedWeapon.reaminingUses();
+        if (uses > 0){
+            //Todo lav noget logik til damage
+            return true;
+        }else {
+            return false;
+       }
 
-   //}
+   }
 
 }

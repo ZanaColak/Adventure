@@ -10,6 +10,12 @@ public class RangedWeapon extends Weapon{
     }
 
     @Override
+    public int reaminingUses() {
+        return weaponAmmo;
+    }
+
+
+    @Override
     public String toString() {
         return super.toString() + " " + " Weapon Damage: " + getWeaponDamage() + ", " + "Weapon Ammo: " + weaponAmmo;
     }

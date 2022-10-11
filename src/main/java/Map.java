@@ -58,12 +58,12 @@ public class Map {
         room9.addFoodToRoom("big mac", 32);
 
         //Weapons objects
-        room1.addWeaponsToRoom("knife", -50);
-        room2.addWeaponsToRoom("ak-47", -75);
-        room4.addWeaponsToRoom("kali-sticks", -35);
-        room5.addWeaponsToRoom("sniper", -100);
-        room8.addWeaponsToRoom("m-13", -85);
-        room9.addWeaponsToRoom("desert eagle", -65);
+        room1.addMeleeWeaponsToRoom("knife", 50);
+        room2.addRangedWeaponsToRoom("ak-47", 75, 2);
+        room4.addMeleeWeaponsToRoom("kali-sticks", 35);
+        room5.addRangedWeaponsToRoom("sniper", 100, 1);
+        room8.addRangedWeaponsToRoom("m-13", 85, 3);
+        room9.addRangedWeaponsToRoom("desert eagle", 65, 1);
     }
 
     public Room getStarterRoom() {
