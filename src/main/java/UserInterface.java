@@ -93,12 +93,11 @@ public class UserInterface {
                         System.out.println(equipWeapon + " equipped (Be careful!) ");
                     }else
                         System.out.println("Item was not found in this room");
-                    //Not done yet
                     break;
                 case "attack":
                     //Something here
                     break;
-                default:///
+                default:
                     System.out.println("Wrong input, try again");
             }
         }

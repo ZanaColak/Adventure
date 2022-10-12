@@ -64,6 +64,11 @@ public class Map {
         room5.addRangedWeaponsToRoom("sniper", 100, 1);
         room8.addRangedWeaponsToRoom("m-13", 85, 3);
         room9.addRangedWeaponsToRoom("desert eagle", 65, 1);
+
+        //Enemy objects
+        room8.addEnemiesToRoom("Michael Myers", 100, -80, "Saw");
+        room6.addEnemiesToRoom("Osama Bin Laden", 100, -20, "Bombs");
+        room7.addEnemiesToRoom("Orc", 100, -60, "Axe");
     }
 
     public Room getStarterRoom() {

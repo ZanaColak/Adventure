@@ -8,7 +8,8 @@ public class Room {
     private Room west;
     private Room south;
 
-    private ArrayList<Item> items = new ArrayList<>();
+    private ArrayList<Item> items = new ArrayList<>(); //Arraylist for the items
+    private ArrayList <Enemy> enemies = new ArrayList<>(); //Arraylist for the enemies
 
     //Konstruktør
     public Room(String name, String description) {
@@ -73,9 +74,15 @@ public class Room {
     public void addItemToRoom(String itemName) {
         items.add(new Item(itemName));
     }
+    public void addEnemiesToRoom (Enemy enemy){
+        enemies.add(enemy);
+    }
+    public void addEnemiesToRoom (String enemyName, int enemyHealth, int enemyDamage, String enemyWeapon){
+        enemies.add(new Enemy(enemyName, enemyHealth, enemyDamage, enemyWeapon));
+    }
 
     public void addFoodToRoom(String foodName, int health) { //adder food objekter til map klassen
-        items.add(new Food(foodName, health));
+        items.add(new Food(foodName, health)); //Adder objekter til arraylisten items
     }
     public void addMeleeWeaponsToRoom(String weaponName, int weaponDamage){ //Adder vi våben objekter til map klassen
         items.add(new MeleeWeapon(weaponName, weaponDamage));
@@ -83,13 +90,18 @@ public class Room {
     public void addRangedWeaponsToRoom(String weaponName, int weaponDamage, int ammo){ //Adder vi våben objekter til map klassen
         items.add(new RangedWeapon(weaponName, weaponDamage,ammo));
     }
-    public ArrayList<Item> getItemList() {
+    public ArrayList<Item> getItemList() { //Get method to the arraylist
         return items;
     }
+    public ArrayList <Enemy> getEnemies (){ //Get method to the arraylist
+        return enemies;
+    }
 
-
-    public void removeItem(Item item) { //Fjerner vi items
+    public void removeItem(Item item) { //Removing enemies
         items.remove(item);
+    }
+    public void removeEnemies (Enemy enemy){ //Removing enemies
+        enemies.remove(enemy);
     }
 
     public String getItem(String itemName) { //Get metode til items
@@ -110,12 +122,10 @@ public class Room {
         return null;
     }
 
-
     @Override
     public String toString() { //To String metode
-        return name + "\n" + description + "\n" + "Items: " + items + " \n";
+        return name + "\n" + description + "\n" + "Items: " + items + " \n" + enemies;
     }
-
 
 }
 

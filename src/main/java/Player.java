@@ -3,7 +3,7 @@ import java.util.*;
 public class Player {
     private int healthPoints = 100; //Erklære healthpoints til 100
 
-    Map map = new Map(); //Method call
+    private Map map = new Map(); //Method call
     private Room currentRoom = map.getStarterRoom(); //Initialiserer currentRoom som starterRoom.
 
     private Weapon equippedWeapon;
